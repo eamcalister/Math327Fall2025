@@ -1,0 +1,32 @@
+
+  <section xml:id="los"><title>Learning Outcomes</title>
+  <!--This version of the learning outcomes is for Math 121 and is GTPathways compliant.-->
+  <paragraphs xml:id="basic-concepts">
+    <title>Basic Concepts in Differential Equations</title>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Recognize when to use algebra and perform algebra correctly. Mathematics is a cumulative subject. You must correctly use the skills acquired in previous math classes.
+          </p>
+        </li>
+      </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Analytic Solution Methods</title>
+    
+  </paragraphs>
+
+  <paragraphs>
+    <title>Qualitiative and Numerical Methods</title>
+    
+  </paragraphs>
+
+  <paragraphs>
+    <title>Mathematical Modeling with Differential Equations</title>
+    
+  </paragraphs>
+
+
+</section>
