@@ -1,0 +1,105 @@
+  <section xml:id="course-info">
+    <!--Fill with appropriate course information-->
+    <title>Course Information</title>
+    <p> 
+      <dl>
+        <li><title>Course Title</title>
+          <p>
+            Differential Equations
+          </p>
+        </li>
+        <li><title>Course Number</title>
+          <p>
+            MATH 327
+          </p>
+        </li>
+        <li><title>Credits</title>
+          <p>
+            3
+          </p>
+        </li>
+        <li><title>Times and Rooms</title>
+        <!--e.g.-->
+        <ul>
+        <li>  
+          <em>Section 1 Time and Room(s):</em> MWF 12:20-1:15pm, EBH 030
+        </li>
+      </ul>
+    </li>
+        <li><title>Instructors</title>
+          <ul>
+            <li>
+              <p>
+                Dr. Erich McAlister (<url href="mailto:mcalister_e@fortlewis.edu">mcalister_e@fortlewis.edu</url>)
+              </p>
+            </li>
+          </ul>        
+        </li>
+      </dl>
+    </p>
+
+  <paragraphs xml:id="description">
+    <title>Course Description</title>
+    <p>
+      An introduction to ordinary differential equations. Topics include methods of solving first-order ordinary differential equations, basic theory of solving n-th order linear equations, solving linear systems of first order equations, and Laplace transforms. Other topics may include numerical methods, infinite series methods, and qualitative analysis of differential equations. Applications will be emphasized.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="instructional-format">
+    <title>Instructional Format</title>
+    <p>This is a face-to-face course, which means we will meet in person.</p>
+  </paragraphs>
+
+  <paragraphs xml:id="course-materials">
+    <title>Course Materials</title>
+    <p>
+      Required Text: <em>Differential Equations: A Toolbox for Modeling the World</em>, by Kurt Brian (ISBN 979-8-89372-019-8). Purchasing the textbook is officially optional, but strongly encouraged. The first chapter is available online at <url href="https://qubeshub.org/community/groups/simiodetext/books/sample/frontmatter.html" visual="Chapter 1" /> and the text is available for purchase at <url href="https://shop.simiode.org/products/book-online" visual="HTML version"/> or <url href="https://shop.simiode.org/products/book-paperback?pr_prod_strat=e5_desc\amp;pr_rec_id=78443fc4c\amp;pr_rec_pid=7471309881514\amp;pr_ref_pid=8049471127722\amp;pr_seq=uniform" visual="paperback and online" />.
+    </p>
+    <p>
+      In addition to the textbook we will use some Python and the online modeling software Insightmaker (<url href="https://insightmaker.com/" />.)
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="office-hours">
+    <title>Student Office Hours</title>
+    <p>
+    <ul>
+      <li>
+        <p>
+          <em>Erich's PEC Office Hours:</em> 
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Other Office Hours:</em> If you are unable to attend my PEC hours, but still need some help, please let me know and we can find a time that will work.
+        </p>
+      </li>
+    </ul>
+  </p>
+  </paragraphs>
+
+  <paragraphs xml:id="feedback">
+    <title>Feedback and Communication</title>
+    <p>
+      Communication of all course information will occur via Canvas as well as in class. Most assignments will be submitted and graded online in Canvas or Webwork.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="missing-class">
+    <!--Course policies are made by intructional teams; these are examples.-->
+    <title>Missing Class</title>
+    <p>
+      If you need to miss class, that is ok. If you miss class, be sure to check Canvas and Webwork for assignments, and try to get notes from a classmate. If you're still having difficulty with the material, use office hours or the Peer Education Center to get caught up. If you need an extension on an assignment, just ask your professor and it will likely be granted.
+    </p>
+    <p>
+      If you need to miss class for an extended period of time, let your professor know so that we may work out a remote accommodation.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="tech">
+    <title>Technology and Software Requirements</title>
+    <p>
+      You will need to be able to access Canvas and Webwork (online homework system) and submit assignments online. Internet access and a scanning device are required. Calculators will not be used on exams, but will frequently be useful for homework and in class.
+    </p>
+  </paragraphs>
+</section>
