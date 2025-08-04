@@ -4,28 +4,95 @@
   <paragraphs xml:id="basic-concepts">
     <title>Basic Concepts in Differential Equations</title>
     <p>
+      Students will learn basic concepts in differential equations. These include:
       <ul>
         <li>
           <p>
-            Recognize when to use algebra and perform algebra correctly. Mathematics is a cumulative subject. You must correctly use the skills acquired in previous math classes.
+            Students will know what a differential equation is and what it means to solve one.
           </p>
         </li>
+        <li>
+          <p>
+            Students will know basic differential equation nomenclature (order, linearity, etc.).
+          </p>
+        </li>
+        <li>
+          <p>
+            Students will know what is meant by analytic, numerical, and qualitiative techniques for differential equations.
+          </p>
+        </li>
+      </ul>
       </p>
   </paragraphs>
 
   <paragraphs>
     <title>Analytic Solution Methods</title>
-    
+    <p>
+      Students will become proficient with the following analytic techniques for solving ordinary differential equations:
+      <ul>
+        <li>
+          <p>
+            solving first-order linear ODEs using integrating factors,
+          </p>
+        </li>
+        <li>
+          <p>
+            solving separable first-order ODEs using the method of Separation of Variables,
+          </p>
+        </li>
+        <li>
+          <p>
+            solving linear systems of differential equations using the eigenvalue method,
+          </p>
+        </li>
+        <li>
+          <p>
+            and solving linear constant-coefficient second-order ODEs using eigenvalues, undetermined coefficients, and the Laplace transform. 
+          </p>
+        </li>
+      </ul>
+    </p>
   </paragraphs>
 
   <paragraphs>
     <title>Qualitiative and Numerical Methods</title>
-    
+    <p>
+      Students will learn the basic ideas of numerical and qualitiative methods. These include the following:
+      <ul>
+        <li>
+          <p>
+            sketching direction fields for first-order ODEs,
+          </p>
+        </li>
+        <li>
+          <p>
+            sketching phase portraits for autonomous first-order ODEs,
+          </p>
+        </li>
+        <li>
+          <p>
+            finding bifurcation values for parametrized families of autonomous first-order ODEs,
+          </p>
+        </li>
+        <li>
+          <p>
+            understand and execute Euler's Method both by hand and with a computer,
+          </p>
+        </li>
+        <li>
+          <p>
+            and estimate appropriate step-sizes for Euler's Method based on the order of the method.
+          </p>
+        </li>
+      </ul>
+    </p>
   </paragraphs>
 
   <paragraphs>
     <title>Mathematical Modeling with Differential Equations</title>
-    
+    <p>
+      Students will build and analyze mathematical models of real-world scenarios using differential equations.
+    </p>
   </paragraphs>
 
 
