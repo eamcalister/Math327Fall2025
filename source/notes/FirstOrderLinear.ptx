@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="first-order-linear">
+        <title>Solution Technique 1: First Order Linear ODEs</title>
+        <p>
+            This note gives two useful techniques for solving first-order linear ODEs. 
+        </p>
+        <definition xml:id="def-first-order-linear">
+            <title>First-Order Linear ODE (most of Definition 2.1.1 in Text)</title>
+            <statement>
+                <p>
+                    A first-order ODE that can be written in the form 
+                    <men xml:id="first_non_hom" >
+                        u' = g(t) + h(t)u
+                    </men>
+                    for some functions <m>g(t)</m> and <m>h(t)</m> is called <term>linear</term>. If <m>g(t)\equiv 0</m>, then the linear ODE is <term>homogeneous</term>.
+                </p>
+            </statement>
+        </definition>
+
+
+
+        <subsection xml:id="integrating-factors">
+            <title>The Integrating Factor Method</title>
+        <p>
+            The following method will always work to find solutions to linear first-order ODEs. The only potential problem with it is finding antiderivatives. Because of the name of the function <m>\mu(t)</m> in this method, it is called the <term>integrating factor method</term>.
+        </p>
+        <algorithm xml:id="int-factor-method">
+            <title>Solving with an Integrating Factor</title>
+            <p>
+                To solve <xref ref="first_non_hom"/>, proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Re-write the equation in the form
+                            <me>
+                                u' - h(t)u  = g(t).
+                            </me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Compute the integrating factor
+                            <me>
+                                \mu(t) = e^{-\int h(t)dt}
+                            </me>
+                            (the integral in the exponent can me taken with constant of integration equal to zero). Observe that <m>\mu'(t) = -h(t)\mu(t) </m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Multiply both sides of the re-written ODE by <m>\mu(t)</m> to obtain
+                            <me>
+                                u'\mu(t) - h(t)\mu(t)u(t) = g(t)\mu(t).
+                            </me>
+                            Note that, by the observation in the previous step, the left-hand side of this equation is
+                            <me>
+                                \frac{d}{dt}(u\cdot \mu(t)).
+                            </me>
+                            Thus, the ODE takes the form
+                            <me>
+                                \frac{d}{dt}(u\cdot \mu(t)) = g(t)\mu(t).
+                            </me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Integrate both sides of the last equation to get rid of the <m>\frac{d}{dt}</m>, then solve for <m>u(t)</m>. Apply whatever initial conditions you may have to solve for the unknown constant in your solution.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </algorithm>
+        
+        
+        
+        </subsection>
+
+        <subsection xml:id="up_plus_uh">
+          <title>The <m>u_p + u_h</m> Method</title>
+        <p>
+            Another useful, but less flexible, method relies on the following theorem.
+        </p>
+        <theorem xml:id="first-order-linear-solutions">
+            <title>Form of Solutions to First-Order Linear ODEs</title>
+            <statement>
+                <p>
+                    The general solution to the ODE <xref ref="first_non_hom"/> is
+                <me>
+                    u(t) = u_h(t) + u_p(t)
+                </me>
+                where <m>u_h(t)</m> is the general solution to the homogeneous first-order ODE
+                <men xml:id="hom_aux" >
+                    u' = h(t)u
+                </men>
+                and <m>u_p(t)</m> is any particular solution to <xref ref="first_non_hom"/> you may be able to find.                                
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                Let <m>u(t)</m> be an arbitrary solution to <xref ref="first_non_hom"/>. Consider the difference <m>u(t) - u_p(t)</m>. Observe that
+                <md>
+                    <mrow> \frac{d}{dt}(u(t)-u_p(t)) \amp = (g(t) + h(t)u(t)) - (g(t) + h(t)u_p(t)) </mrow>
+                    <mrow> \amp =  h(t)(u(t) - u_p(t)).  </mrow> 
+                </md>
+                Hence, <m>u(t) - u_p(t)</m> is a solution to <xref ref="hom_aux"/>, which means <m>u(t)</m> has the form indicated by the theorem.
+            </p>
+        </proof>
+        <algorithm xml:id="u_p-u_h-method">
+            <title>The <m>u_p + u_h</m> Method</title>
+            <p>
+                To solve <xref ref="first_non_hom"/>, proceed as follows:
+            <ol>
+                <li>
+                    <p>
+                        Observe that <m>u_h(t) = Ke^{\int h(t) dt}</m>, where <m>K</m> is an arbitrary constant.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Figure out a single solution to <xref ref="first_non_hom"/>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Form the general solution as indicated by the theorem and apply any initial conditions to solve for <m>K</m>.
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </algorithm>
+        
+        <remark>
+            <statement>
+                <p>
+                The technique <xref ref="u_p-u_h-method"/> is extremely useful when a particular solution can be found by inspection. For instance, when an equilibrium or steady-state solution is evident.
+                </p>
+            </statement>
+
+        </remark>
+        
+            
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

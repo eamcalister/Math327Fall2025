@@ -2,16 +2,16 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
   <xi:include href="./docinfo.ptx" />
   <article xml:id="ch-course-notes" >
-    <title>Course Notes</title>
+    <title>Math 327 Solution Techniques</title>
 
     <introduction>
       <p>
-        The following notes are intended to remind you what we covered each week.  They are not a substitute for attending class and not a substitute for reading the textbook.
+        The following notes are intended to be a consise collection of solution techniques for solving ODEs in Math 327 at Fort Lewis College. For examples and applications, please consult your class notes and/or textbook. 
       </p>
     </introduction>
 
-    <!--xi:include href="./notes/starting.ptx" /-->
-    <!--xi:include href="./notes/builds.ptx" /-->
+    <xi:include href="./notes/FirstOrderLinear.ptx" />
+
 
     <!-- Add more xi:include files here to include them in the main course -->
   </article>
