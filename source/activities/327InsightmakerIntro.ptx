@@ -64,7 +64,7 @@
                             </li>
                             <li>
                                 <p>
-                                   We want to create a model in which we can vary the parameter <m>r</m>. To do this, create a primitive Variable called <m>r</m>. For this, you can create a slider so that you don't have to manually type in values. Also, give $r$ a reasonable range of values with a reasonable step-size. 
+                                   We want to create a model in which we can vary the parameter <m>r</m>. To do this, create a primitive Variable called <m>r</m>. For this, you can create a slider so that you don't have to manually type in values. Also, give <m>r</m> a reasonable range of values with a reasonable step-size. 
                                 </p>
                             </li>
                             <li>
