@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- When creating a new activity, make a copy of this file with appropriate name -->
+        <worksheet margin="1in" bottom="1.25cm" xml:id="Activity-title">
+            <title>Modeling Activity 1 - Introduction to Insightmaker</title>
+
+            <introduction>
+                <p>
+                    <em> This activity is to be done with a partner and is due Tuesday, September 2 on Canvas.</em> Please make sure your final write-up is in ``final draft'' form. If you haven't already done this, go to <url href="https://insightmaker.com" visual = "https://insightmaker.com"/> and create an account. We will use this site (and other software) throughout the semester. You may also want to go to <url href="https://eamcalister.github.io/InsightmakerODEModeling/Sec1_1_Insights_and_ODEs.html" visual = "Insightmaker text introduction" /> prior to class to help you figure out what is happening.
+                </p>
+            </introduction>
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                       (The Mystery Insight) Go to <url href="https://insightmaker.com/insight/233403/Mystery-Insight" visual = "https://insightmaker.com/insight/233403/Mystery-Insight" /> and clone this Insight. 
+                    </p>
+                </introduction>
+                <task>
+                    <statement>
+                        <p>
+                            (2 points) When you click Simulate, what function is graphed?
+                        </p>
+                    </statement>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            (3 points) Change the initial value on the {\bf What am I?} stock to something other than zero. Now what function is graphed when you simulate?
+                        </p>
+                    </statement>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            (3 points) Now click on the <term> inflow = f</term> flow into/out of the stock. Based on the formula for this flow, what is the stock in relation to the flow? Tell me why this makes sense in terms of Calculus, and ``prove'' your answer by changing the flow function and showing the resulting simulation graph.       
+                        </p>
+                    </statement>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            (2 points) What is the Mystery Insight model, expressed as a differential equation?
+                        </p>
+                    </statement>
+                </task>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        (5 points) (Build Your Own, Simple version) Now we would like to create an Insight to model Malthusian growth, i.e. exponential growth of a population given by the differential equation.
+                        <md>
+                        \frac{dP}{dt} = rP.
+                        </md>
+                        We're going to do this together. When you submit your work, include the Insightmaker file (with a name different from the one on problem 3).
+                    </p>
+                    <p>
+                        Here are some steps we'll take:
+                        <ul>
+                            <li>
+                                <p>
+                                    Create a primitive Stock, and call it <m>P</m>, or whatever you think sounds good. Assign units to this stock.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                   We want to create a model in which we can vary the parameter <m>r</m>. To do this, create a primitive Variable called <m>r</m>. For this, you can create a slider so that you don't have to manually type in values. Also, give $r$ a reasonable range of values with a reasonable step-size. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Create a flow off of you stock. In order to have the flow rate involve the parameter <m>r</m>, you need a link from <m>r</m> to the flow. Create that, then give the formula for the flow.
+                                </p>
+                            </li>
+                        </ul>
+                        Now simulate and see if the graph you get is what you expect. If it isn't we'll figure out what's wrong.
+                    </p>
+                </statement>
+            </exercise>
+        </page>
+
+        <page>
+        <exercise>
+            <introduction>
+                <p>
+                    Now create an Insight to for the fish population with harvesting given in section 1.3 of the text (the differential equation is equation 1.3.6 in html version). Your Insight should have three parameters <m>r</m>, <m>K</m>, and <m>h</m>. It should have two flows, one inflow for reproduction (involving <m>r</m>) and one outflow to account for resource limitations and harvesting (involving <m>K</m> and <m>h</m>). Again, include the Insightmaker file for this exercise. {\bf To receive full credit all primitives should have units.}
+                </p>
+                <p>
+                    <em>Sense making tip:</em> Do a little algebra to get the differential equation to have isolated parts with obvious <m>+</m>'s and <m>-</m>'s and use in arrows for <m>+</m>'s and out arrows for <m>-</m>'s. Also, to receive full credit, your Insight must include units for all stocks, flows, and variables. 
+                </p>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                       (5 points) Let <m>K = 10</m>, <m>r = 1</m>, <m>h = 0</m>, and <m>u_0 = 2</m>. Run the simulation. Does the solution curve make sense, given the context of the model (What are <m>h</m> and <m>K</m> supposed to represent?)? Also, does the graph you get from Insightmaker approximately agree with the solution given by equation 1.3.7 (in html version) of the text (using the given parameters, graphed somewhere else, like Desmos)? Include screenshots of all your images in your submission and write sentences to explain. 
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                       (5 points) By varying values of <m>h</m> (with the other parameters as above), how large can <m>h</m> be before the fish population goes extinct eventually? Include screenshots in your write-up to support your claim. 
+                    </p>
+                </statement>
+            </task>
+
+
+        </exercise>
+
+
+
+        </page>
+
+        </worksheet>
