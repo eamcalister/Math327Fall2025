@@ -10,9 +10,9 @@
       <department>Mathematics Department</department>
       <institution>Fort Lewis College</institution>
     </author>
-    <date>
+    <!--date>
       Last Updated: <today />
-    </date>
+    </date-->
 
   </bibinfo>
 

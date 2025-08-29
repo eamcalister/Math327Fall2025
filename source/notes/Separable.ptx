@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="separable">
+        <title>Solution Technique 2: Separable First-Order ODEs</title>
+        <p>
+            This note gives one of the few techniques for solving some non-linear ODEs.  
+        </p>
+        <definition xml:id="def-first-order-separable">
+            <title>Separable First-Order ODE (Definition 2.2.1 in Text)</title>
+            <statement>
+                <p>
+                    A first-order ODE that can be written in the form 
+                    <men xml:id="first_sep" >
+                        u' = g(t)h(u)
+                    </men>
+                    for some functions <m>g(t)</m> and <m>h(u)</m> is called <term>separable</term>.
+                </p>
+            </statement>
+        </definition>
+
+
+
+        <subsection xml:id="separation-of-variables">
+            <title>The Separation of Variables Method</title>
+        <p>
+            The following method can be used to solve separable ODEs, at least in principle. The ability to perform the necessary integrations and/or do algebra for an explicit expression for <m>u(t)</m> will always be an issue (they're not always possible).  
+        </p>
+        <p>
+            <alert>Note:</alert> Separation of variables also refers to an important technique for solving partial differential equations using Fourier series. This isn't what we're doing.
+        </p>
+        <algorithm xml:id="sep-var-method">
+            <title>Solving with an Integrating Factor</title>
+            <p>
+                To solve <xref ref="first_sep"/>, proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Separate:
+                            <me>
+                                \frac{1}{h(u)}du = g(t)dt
+                            </me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                           Integrate:
+                            <me>
+                                \int\frac{1}{h(u)}du = \int g(t)dt
+                            </me>
+                        Observe that you are really doing a "<m>u</m>" substitution on the left-hand side. The integral is really with respect to <m>t</m>.
+                        </p>
+                        <p>
+                            This will get you an equation of the form
+                            <me>
+                                F(u) = G(t) + C,
+                            </me>
+                            where <m>G(t)</m> is some antiderivative of <m>g(t)</m> and <m>F(u)</m> is an antiderivative of <m>\frac{1}{F(u)}</m>.
+                        </p>
+
+                    </li>
+                    <li>
+                        <p>
+                           Do algebra to solve for <m>u(t)</m> and/or apply initial conditions to determine <m>C</m>. At this point the technique depends on that specific functions you're dealing with.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </algorithm>
+        
+        
+        
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

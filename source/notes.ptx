@@ -11,6 +11,7 @@
     </introduction>
 
     <xi:include href="./notes/FirstOrderLinear.ptx" />
+    <xi:include href="./notes/Separable.ptx" />
 
 
     <!-- Add more xi:include files here to include them in the main course -->
