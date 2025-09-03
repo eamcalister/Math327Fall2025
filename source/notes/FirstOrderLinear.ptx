@@ -140,7 +140,62 @@
                 </p>
             </statement>
 
+        <p>
+           In cases when <m>g(t)</m> is from a familiar family of functions, one can often determine a particular solution <m>u_p</m> to <xref ref="first_non_hom"/> by "guessing" a general function with the same form as <m>g(t)</m>, plugging the general function into <xref ref="first_non_hom"/>, and solving for the relevant parameters. This can also be called the <em>Guess and Mate it Happen</em> method. 
+        </p>
+
         </remark>
+
+                <algorithm xml:id="undetermined-coefficients">
+            <title>The Method of Undetermined Coefficients</title>
+            <p>
+                To solve <xref ref="first_non_hom"/>, proceed as follows:
+            <ol>
+                <li>
+                    <p>
+                        Observe that <m>u_h(t) = Ke^{\int h(t) dt}</m>, where <m>K</m> is an arbitrary constant.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Guess a generic function in the same family as <m>g(t)</m> for <m>u_p(t)</m>. For instance, 
+                        <ul>
+                            <li>
+                                <p>
+                                   if <m>g(t)</m> is linear, guess <m>u_p(t) = mt+b</m>, 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    if <m>g(t)</m> is quadratic, guess <m>u_p(t) = at^2+bt+c</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    if <m>g(t)</m> is exponential, guess an exponential with the same growth rate,
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    etc.
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Plug your guess function into <xref ref="first_non_hom"/> and solve the resulting system of equations for any unknow parameters.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Form the general solution as indicated by the theorem and apply any initial conditions to solve for <m>K</m>.
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </algorithm>
         
             
         </subsection>
