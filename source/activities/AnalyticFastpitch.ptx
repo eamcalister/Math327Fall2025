@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- When creating a new activity, make a copy of this file with appropriate name -->
+        <worksheet margin="1in" bottom="1.25cm" xml:id="Fastpitch_Formulas">
+            <title>Modeling Activity 2 (Part 1) - Analytic Approach to the Fastball Model</title>
+
+            <introduction>
+                <p>
+                   Pitch velocity is one of the most fascinating statistics in baseball, as documented in the 2015 documentary <em>Fastball</em>(<url href="https://www.youtube.com/watch?v=5ogJvlzwxQs" visual="on Youtube" />). The interesting thing is that methods of measurement have changed over the years. Curently, the velocity is measured as is leaves the pitcher's hand. From 2008 through 2016, the velocity was measured at a distance of <m>50</m> feet from home plate. When a radar gun was first used in a Major League game in 1974, the measurement of velocity was take <m>10</m> feet from home plate. Since pitches slow down as they travel, we would like to develop an ODE model for pitch velocity to compare some of the fastest pitches ever thrown. 
+                </p>
+                <p>
+                    <em> This activity is to be done with a partner and is due Friday, September 12 on Canvas.</em> Please make sure your final write-up is in ``final draft'' form. 
+                </p>
+            </introduction>
+<page>
+<exercise xml:id="baseball_dimensional_model" workspace="2in">
+	<statement>
+	<p>
+		Define variables as follows:
+		<md>
+			<mrow>A\amp = \amp \text{cross sectional area of a baseball} </mrow>
+			<mrow>m\amp = \amp \text{mass of a baseball} </mrow>
+			<mrow>\rho\amp = \amp \text{density of air} </mrow>
+			<mrow>v\amp = \amp \text{velocity of the baseball} </mrow>
+			<mrow>K\amp = \amp \text{a dimensionless coefficient} </mrow>
+		</md> 
+		Assume that the force acting to slow down a baseball in flight is given by
+		<me>
+			F = mv' = -KA^{a}\rho^{b}v^{c}.
+		</me>
+		<ol>
+			<li>
+				<p>
+					Use dimensional analysis to explain why the exponent <m>d</m> must equal <m>2</m>.
+				</p>
+			</li>
+			<li>
+				<p>
+					Explain why it makes sense to have the minus sign in front of <m>K</m>.
+				</p>
+			</li>
+		</ol>
+	</p>
+	</statement>
+		<hint>
+			<p>
+				Attach units to all the terms on both sides of the given equation and observe that time units only appear in one place on the right-hand side.
+			</p>
+		</hint>
+</exercise>
+
+  <p>
+	From now on, we may represent the ODE given in <xref ref="baseball_dimensional_model"/> as 
+	<me>
+		v' = -kv^2,
+	</me>
+	where <m>k = \frac{K\rho A}{m}</m>. 
+  </p>
+</page>
+    
+<page>
+<exercise xml:id="analytic_solution">
+    <statement>
+        <p>
+            Solve the ODE given above for <m>v(t)</m> and integrate to get the displacement function <m>s(t)</m>.
+        </p>
+    </statement>
+    
+</exercise>
+</page>
+<page>
+<exercise workspace="4in">
+
+<introduction>
+    <p>
+        We would like to estimate the value of the parameter <m>k</m> using the formula for <m>s(t)</m> from <xref ref="analytic_solution"/> from data from a single pitch collected with a Bluetooth enabled baseball (<url href="https://docs.google.com/spreadsheets/d/1csJmCHzopbc_EWa1idFGMoDUBorkBRIbZvatA2nk11U/edit?gid=2134910657#gid=2134910657" visual = "Pitch Data"/>). The data collected consists of the following:
+        	<ul>
+		<li>
+			<p>
+				<term>Time to Plate:</term> This is the time it takes from the pitcher's initial movement until the ball gets to home plate, which is 60.5 feet from the pitcher's mound.
+			</p>
+		</li>
+		<li>
+			<p>
+				<term>Delivery Time:</term> This is the time from the pitcher's initial movement until the ball is released.
+			</p>
+		</li>
+		<li>
+			<p>
+				<term>Extension:</term> This is how far in front of the pitcher's mound the ball is released.
+			</p>
+		</li>
+	</ul>
+
+
+    </p>
+
+    <table xml:id="pitch_data"><title>Baseball Velocity Data</title>
+  <tabular>
+  
+	<row header="yes" bottom = "major">
+		<cell>Initial Velocity (mph)</cell><cell>Time to Plate (s)</cell><cell>Delivery Time (s)</cell><cell>Extension (ft)</cell>
+	</row>
+	<row>
+		<cell>85</cell><cell>1.2</cell><cell>0.74</cell><cell>5.1</cell>
+	</row>
+  </tabular>
+</table>
+</introduction>
+<task workspace="6in">
+    <statement>
+        <p>
+            Use the formula for <m>s(t)</m> you got in <xref ref="analytic_solution"/> and the single pitch data in <xref ref="pitch_data"/> and try to solve for <m>k</m> algebraically. Say where you get stuck.
+        </p>
+    </statement>
+</task>
+<task workspace="2in">
+    <statement>
+        <p>
+            Now use some graphing technology to estimate <m>k</m> using the given data and your formula from <xref ref="analytic_solution"/>. <em>You must include a screenshot of your graph in your write-up</em>.
+        </p>
+    </statement>
+</task>
+    
+</exercise>
+<p>
+    The estimate of <m>k</m> you just found was based on a single pitch and might be inexact. On Wednesday we will use more data and Insightmaker to refine our estimate of <m>k</m>. Then we will have enough information to answer who threw the fastest pitch ever.
+</p>      
+
+</page>
+
+
+
+</worksheet>
