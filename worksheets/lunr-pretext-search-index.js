@@ -80,6 +80,33 @@ var ptx_lunr_docs = [
   "number": "3",
   "title": "",
   "body": "  We would like to estimate the value of the parameter using the formula for from from data from a single pitch collected with a Bluetooth enabled baseball ( ). The data collected consists of the following:    Time to Plate: This is the time it takes from the pitcher's initial movement until the ball gets to home plate, which is 60.5 feet from the pitcher's mound.     Delivery Time: This is the time from the pitcher's initial movement until the ball is released.     Extension: This is how far in front of the pitcher's mound the ball is released.     Baseball Velocity Data    Initial Velocity (mph) Time to Plate (s) Delivery Time (s) Extension (ft)    85 1.2 0.74 5.1        Use the formulas for and you got in and the single pitch data in and try to solve for algebraically. Say where you get stuck. (Be careful with your units.)      Now use some graphing technology to estimate using the given data and your formula from . You must include a screenshot of your graph in your write-up . Note: The value of is pretty small.    "
+},
+{
+  "id": "Fastpitch_Insight",
+  "level": "1",
+  "url": "Fastpitch_Insight.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Modeling Activity 2 (Part 2) - Numerical Approach to the Fastball Model with Insightmaker",
+  "body": " Modeling Activity 2 (Part 2) - Numerical Approach to the Fastball Model with Insightmaker   Now we will use additional data to refine our estimate of the parameter from . To start we will discuss building a similar model and parameter estimation with Insightmaker using . In particular, we will find useful.   This activity is to be done with a partner and is due Saturday, September 13 on Canvas. Please make sure your final write-up is in ``final draft'' form.      Create an Insight to estimate for each row of the table given below. You must include your Insightmaker file as an attachemnt to your write-up. Use your collection of values to create a final estimate of . Note: There is some bad data in the table; you need to recognize it.  Baseball Velocity Data    Velocity (mph) Time to Plate (s) Delivery Time (s) Extension (ft)    85 1.2 0.74 5.1    83.7 1.3 0.84 6.2    79.3 1.25 0.79 4.1    83.6 1.4 0.95 4.8    82.3 1.21 0.75 5.7    85.7 1.26 0.81 5.0    81.7 1.17 0.71 5.9    86.7 1.24 0.79 4.5    77.7 1.23 0.72 5.7    72.7 1.25 0.74 3.2    77.3 1.37 0.86 5.8    76.9 1.25 0.74 5.8    73 1.22 0.69 4.4    77.1 1.24 0.78 6           Aroldis Chapman's fastest recorded pitch was a 105.1 mph fastball on September 24, 2010, and its velocity was measured 50.5 ft from home plate. Nolan Ryan threw a pitch whose velocity was measured at 100.9 mph at a distance of 10 ft from home plate. Use your Insight and estimate(s) of to decide which of these two pitches was likely the fastest.     "
+},
+{
+  "id": "data_estimation",
+  "level": "2",
+  "url": "Fastpitch_Insight.html#data_estimation",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Create an Insight to estimate for each row of the table given below. You must include your Insightmaker file as an attachemnt to your write-up. Use your collection of values to create a final estimate of . Note: There is some bad data in the table; you need to recognize it.  Baseball Velocity Data    Velocity (mph) Time to Plate (s) Delivery Time (s) Extension (ft)    85 1.2 0.74 5.1    83.7 1.3 0.84 6.2    79.3 1.25 0.79 4.1    83.6 1.4 0.95 4.8    82.3 1.21 0.75 5.7    85.7 1.26 0.81 5.0    81.7 1.17 0.71 5.9    86.7 1.24 0.79 4.5    77.7 1.23 0.72 5.7    72.7 1.25 0.74 3.2    77.3 1.37 0.86 5.8    76.9 1.25 0.74 5.8    73 1.22 0.69 4.4    77.1 1.24 0.78 6      "
+},
+{
+  "id": "Fastpitch_Insight-4-1",
+  "level": "2",
+  "url": "Fastpitch_Insight.html#Fastpitch_Insight-4-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Aroldis Chapman's fastest recorded pitch was a 105.1 mph fastball on September 24, 2010, and its velocity was measured 50.5 ft from home plate. Nolan Ryan threw a pitch whose velocity was measured at 100.9 mph at a distance of 10 ft from home plate. Use your Insight and estimate(s) of to decide which of these two pitches was likely the fastest.   "
 }
 ]
 
