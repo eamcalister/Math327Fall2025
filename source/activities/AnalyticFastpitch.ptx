@@ -6,7 +6,7 @@
 
             <introduction>
                 <p>
-                   Pitch velocity is one of the most fascinating statistics in baseball, as documented in the 2015 documentary <em>Fastball</em>(<url href="https://www.youtube.com/watch?v=5ogJvlzwxQs" visual="on Youtube" />). The interesting thing is that methods of measurement have changed over the years. Curently, the velocity is measured as is leaves the pitcher's hand. From 2008 through 2016, the velocity was measured at a distance of <m>50</m> feet from home plate. When a radar gun was first used in a Major League game in 1974, the measurement of velocity was take <m>10</m> feet from home plate. Since pitches slow down as they travel, we would like to develop an ODE model for pitch velocity to compare some of the fastest pitches ever thrown. 
+                   Pitch velocity is one of the most fascinating statistics in baseball, as documented in the 2015 documentary <em>Fastball</em>(<url href="https://www.youtube.com/watch?v=5ogJvlzwxQs" visual="on Youtube" />). The interesting thing is that methods of measurement have changed over the years. Curently, the velocity is measured as is leaves the pitcher's hand. From 2008 through 2016, the velocity was measured at a distance of <m>50.5</m> feet from home plate. When a radar gun was first used in a Major League game in 1974, the measurement of velocity was take <m>10</m> feet from home plate. Since pitches slow down as they travel, we would like to develop an ODE model for pitch velocity to compare some of the fastest pitches ever thrown. 
                 </p>
                 <p>
                     <em> This activity is to be done with a partner and is due Friday, September 12 on Canvas.</em> Please make sure your final write-up is in ``final draft'' form. 
@@ -31,7 +31,7 @@
 		<ol>
 			<li>
 				<p>
-					Use dimensional analysis to explain why the exponent <m>d</m> must equal <m>2</m>.
+					Use dimensional analysis to explain why the exponent <m>c</m> must equal <m>2</m>.
 				</p>
 			</li>
 			<li>
@@ -110,14 +110,14 @@
 <task workspace="6in">
     <statement>
         <p>
-            Use the formula for <m>s(t)</m> you got in <xref ref="analytic_solution"/> and the single pitch data in <xref ref="pitch_data"/> and try to solve for <m>k</m> algebraically. Say where you get stuck.
+            Use the formulas for <m>s(t)</m> and <m>v(t)</m> you got in <xref ref="analytic_solution"/> and the single pitch data in <xref ref="pitch_data"/> and try to solve for <m>k</m> algebraically. Say where you get stuck. (Be careful with your units.)
         </p>
     </statement>
 </task>
 <task workspace="2in">
     <statement>
         <p>
-            Now use some graphing technology to estimate <m>k</m> using the given data and your formula from <xref ref="analytic_solution"/>. <em>You must include a screenshot of your graph in your write-up</em>.
+            Now use some graphing technology to estimate <m>k</m> using the given data and your formula from <xref ref="analytic_solution"/>. <em>You must include a screenshot of your graph in your write-up</em>. <term>Note:</term> The value of <m>k</m> is pretty small.
         </p>
     </statement>
 </task>

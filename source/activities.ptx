@@ -12,6 +12,7 @@
     </introduction>
     <xi:include href="./activities/327InsightmakerIntro.ptx"/>
     <xi:include href="./activities/AnalyticFastpitch.ptx"/>
+    <xi:include href="./activities/NumericalFastpitch.ptx"/>
 
     
 
