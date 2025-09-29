@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="numerical-methods">
+        <title>Solution Technique 3: Some Numerical Methods</title>
+        <p>
+            Numerical methods of solving ODEs give you approximate outputs of solutions to initial value problems for inputs of your choosing. Numerical methods are frequently used when no analytic method (e.g. separation of variables or integrating factors) works to find formulas for solutions.
+        </p>
+
+        <p>
+            The most basic numerical method is to approximately follow the slope field from the initial condition point.
+        </p>
+
+        <algorithm xml:id="eulers-method">
+            <title>Euler's Method</title>
+            <p>
+                The value, <m>y_{i+1} = y(t_0 + (i+1)h)</m> of the solution to the IVP
+                <me>
+                    y' = f(t,y), y(t_0) = y_0
+                </me>
+                at the value <m>t_i = ih</m> is approximately
+                <me>
+                    y_i = y_{i-1} + f(t_{i-1},y_{i-1})h.
+                </me>
+            </p>
+        </algorithm>
+
+        The following code executes a Python script for Euler's Method. 
+
+<figure>
+    <caption>Euler's Method with Python</caption>
+<sage  xml:id="sage-python-euler" language="python">
+<input>
+import numpy as np
+# Don't modify this.
+def euler_method(f, y0, t0, tf, h):
+    t = np.arange(t0, tf + h, h)
+    y = np.zeros(len(t))
+    y[0] = y0
+    for i in range(1, len(t)):
+        y[i] = y[i-1] + h * f(t[i-1], y[i-1])
+    return t, y
+
+# Modify starting here.
+# Define the differential equation dy/dt = f(t, y)
+def f(t, y):
+    return  y
+
+# Initial conditions
+y0 = 1
+t0 = 0
+tf = 1
+h = .1
+
+
+# Solve using Euler's method
+t_euler, y_euler = euler_method(f, y0, t0, tf, h)
+
+    
+#print the final output of Euler's Method
+print(f"Using Euler's Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
+print(y_euler[len(y_euler)-1])
+</input>
+</sage>
+</figure>
+
+<p>
+    Euler's Method is effectively an implicit version of using a left-hand Riemann sum to solve an ODE. In fact, to evaluate <m>u(b)</m> for the IVP
+    <me>
+        u' = f(t), u(a)= 0,
+    </me>
+    Euler's Method is exactly the left-hand Riemann sum for 
+    <me>
+        u(b) = u(a) + \int_{a}^b f(t)\,dt.
+    </me>
+    
+    An improvement to Euler's Method, similarly based on the trapezoid rule, is given below. 
+</p>
+
+        <algorithm xml:id="improved-eulers-method">
+            <title>Euler's Method</title>
+            <p>
+                The value, <m>y_{i+1} = y(t_0 + (i+1)h)</m> of the solution to the IVP
+                <me>
+                    y' = f(t,y), y(t_0) = u_0
+                </me>
+                at the value <m>t_i = ih</m> is approximately
+                <me>
+                    y_i = y_{i-1} + mh,
+                </me>
+                where 
+                <me>m = \frac{f(t_i,y_i)+f(t_i,w)}{2}</me>
+                and 
+                <me>
+                    w = y_{i-1} + f(t_{i-1},y_{i-1})h.
+                </me>
+                
+            </p>
+        </algorithm>
+
+<figure>
+    <caption>Improved Euler's Method with Python</caption>
+<sage  xml:id="sage-python-improved-euler" language="python">
+<input>
+import numpy as np
+# Don't modify this.
+def improved_euler(f, y0, t0, tf, h):
+    t = np.arange(t0, tf + h, h)
+    y = np.zeros(len(t))
+    y[0] = y0
+    for i in range(1, len(t)):
+        w = y[i-1] + h * f(t[i-1], y[i-1])
+        y[i] = y[i-1] + h * (f(t[i-1], y[i-1])+f(t[i],w))/2
+    return t, y
+
+# Modify starting here.
+# Define the differential equation dy/dt = f(t, y)
+def f(t, y):
+    return y
+
+# Initial conditions
+y0 = 1
+t0 = 0
+tf = 1
+h = .1
+
+
+# Solve using Improved Euler's method
+
+t_improved_euler, y_improved_euler = improved_euler(f, y0, t0, tf, h)
+
+    
+#print the final output of Euler's Method
+print(f"Using Improved Euler's Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
+print(y_improved_euler[len(y_improved_euler)-1])
+</input>
+</sage>
+</figure>
+
+<p>
+    A more advanced, but harder to justify, technique is known as the <term>fourth-order Runge-Kutta (RK4)</term> algorithm. 
+</p>
+
+<figure>
+    <caption>RK4 with Python</caption>
+<sage  xml:id="sage-python-RK4" language="python">
+<input>
+import numpy as np
+# Don't modify this.
+def runge_kutta_4(f, y0, t0, tf, h):
+    t = np.arange(t0, tf + h, h)
+    y = np.zeros(len(t))
+    y[0] = y0
+    for i in range(1, len(t)):
+        k1 = h * f(t[i-1], y[i-1])
+        k2 = h * f(t[i-1] + 0.5*h, y[i-1] + 0.5*k1)
+        k3 = h * f(t[i-1] + 0.5*h, y[i-1] + 0.5*k2)
+        k4 = h * f(t[i-1] + h, y[i-1] + k3)
+        y[i] = y[i-1] + (k1 + 2*k2 + 2*k3 + k4) / 6
+    return t, y
+
+# Modify starting here.
+# Define the differential equation dy/dt = f(t, y)
+def f(t, y):
+    return y
+
+# Initial conditions
+y0 = 1
+t0 = 0
+tf = 1
+h = .1
+
+
+# Solve using Runge-Kutta 4th order method
+
+t_rk4, y_rk4 = runge_kutta_4(f, y0, t0, tf, h)
+
+    
+#print the final output of rk4
+print(f"Using the RK4 Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
+print(y_rk4[len(y_rk4)-1])
+</input>
+</sage>
+</figure>
+
+<p>
+    The <term>order</term> of a numerical method is the approximate exponent of the step size <m>h</m> when evaluating the error from the exact value. That is, if we are trying to estimate <m>y(b)</m> for the ODE 
+    <me>
+        y' = f(t,y), y(t_0) = y_0,
+    </me>
+    then we define the <term>error</term> to be 
+</p>
+        
+        
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->
