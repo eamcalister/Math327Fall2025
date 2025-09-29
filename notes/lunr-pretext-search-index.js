@@ -107,6 +107,78 @@ var ptx_lunr_docs = [
   "number": "2.2",
   "title": "Solving with an Integrating Factor.",
   "body": " Solving with an Integrating Factor  To solve , proceed as follows:   Separate:     Integrate: Observe that you are really doing a \" \" substitution on the left-hand side. The integral is really with respect to .  This will get you an equation of the form where is some antiderivative of and is an antiderivative of .    Do algebra to solve for and\/or apply initial conditions to determine . At this point the technique depends on that specific functions you're dealing with.     "
+},
+{
+  "id": "numerical-methods",
+  "level": "1",
+  "url": "numerical-methods.html",
+  "type": "Section",
+  "number": "3",
+  "title": "Solution Technique 3: Some Numerical Methods",
+  "body": " Solution Technique 3: Some Numerical Methods  Numerical methods of solving ODEs give you approximate outputs of solutions to initial value problems for inputs of your choosing. Numerical methods are frequently used when no analytic method (e.g. separation of variables or integrating factors) works to find formulas for solutions.  The most basic numerical method is to approximately follow the slope field from the initial condition point.   Euler's Method  The value, of the solution to the IVP at the value is approximately   The following code executes a Python script for Euler's Method.  Euler's Method with Python    Euler's Method is effectively an implicit version of using a left-hand Riemann sum to solve an ODE. In fact, to evaluate for the IVP Euler's Method is exactly the left-hand Riemann sum for An improvement to Euler's Method, similarly based on the trapezoid rule, is given below.   Improved Euler's Method  The value, of the solution to the IVP at the value is approximately where and     Improved Euler's Method with Python    A more advanced, but harder to justify, technique is known as the fourth-order Runge-Kutta (RK4) algorithm.   RK4 with Python    The order of a numerical method is the approximate exponent of the step size when evaluating the error from the exact value. That is, if we are trying to estimate for the ODE then we define the error at to be If an approximation is -th order, then for some constant , which depends of the ODE and the numerical method being used.  Euler's Method is a first order method, Improved Euler's is second, and (surprise!) RK4 is a fourth order method.  "
+},
+{
+  "id": "eulers-method",
+  "level": "2",
+  "url": "numerical-methods.html#eulers-method",
+  "type": "Solution Method",
+  "number": "3.1",
+  "title": "Euler’s Method.",
+  "body": " Euler's Method  The value, of the solution to the IVP at the value is approximately   "
+},
+{
+  "id": "numerical-methods-5",
+  "level": "2",
+  "url": "numerical-methods.html#numerical-methods-5",
+  "type": "Figure",
+  "number": "3.2",
+  "title": "",
+  "body": " Euler's Method with Python   "
+},
+{
+  "id": "improved-eulers-method",
+  "level": "2",
+  "url": "numerical-methods.html#improved-eulers-method",
+  "type": "Solution Method",
+  "number": "3.3",
+  "title": "Improved Euler’s Method.",
+  "body": " Improved Euler's Method  The value, of the solution to the IVP at the value is approximately where and   "
+},
+{
+  "id": "numerical-methods-8",
+  "level": "2",
+  "url": "numerical-methods.html#numerical-methods-8",
+  "type": "Figure",
+  "number": "3.4",
+  "title": "",
+  "body": " Improved Euler's Method with Python   "
+},
+{
+  "id": "numerical-methods-9",
+  "level": "2",
+  "url": "numerical-methods.html#numerical-methods-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "fourth-order Runge-Kutta (RK4) "
+},
+{
+  "id": "numerical-methods-10",
+  "level": "2",
+  "url": "numerical-methods.html#numerical-methods-10",
+  "type": "Figure",
+  "number": "3.5",
+  "title": "",
+  "body": " RK4 with Python   "
+},
+{
+  "id": "numerical-methods-11",
+  "level": "2",
+  "url": "numerical-methods.html#numerical-methods-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "order error at "
 }
 ]
 
