@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="linear-distinct-real">
+        <title>Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues</title>
+        <p>
+            The eigenvalue method for solving a system IVP of the form
+            <me>
+                \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+            </me>
+            where <m>A</m> is a <m>2\times 2</m> matrix relies on two initial facts (they scale up for general <m>n\times n</m> matrices).  
+        </p>
+        <theorem xml:id="superposition">
+            <title>The Superposition Theorem</title>
+            <statement>
+                <p>
+                    If <m>\vec{x}_1(t)</m> and <m>\vec{x}_2(t)</m> are solutions to 
+                    <me>
+                    \vec{x}' = A\vec{x},    
+                    </me>
+                    then so is the linear combination
+                    <me>
+                        c_1\vec{x}_1(t) + c_2\vec{x}_2(t)
+                    </me>
+                    for any constants <m>c_1</m> and <m>c_2</m>.
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                (Sketch) This follows from the fact that the differential operator <m>\frac{d}{dt}</m> and matrix multiplication by <m>A</m> are both linear.
+            </p>
+        </proof>
+
+        <theorem xml:id="linear-independence">
+            <title>Non-Parallel Initial Values Build the General Solution</title>
+            <statement>
+                <p>
+                    If <m>\vec{x}_1(t)</m> and <m>\vec{x}_2(t)</m> are solutions to 
+                    <me>
+                    \vec{x}' = A\vec{x},    
+                    </me>
+                    with <m>\vec{x}_1(0)</m> and <m>\vec{x}_2(0)</m> non-parallel, then the general solution to the system has the form
+                    <me>
+                        c_1\vec{x}_1(t) + c_2\vec{x}_2(t)
+                    </me>
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                (Sketch) Observe that every vector is a linear combination of <m>\vec{x}_1(t)</m> and <m>\vec{x}_2(t)</m> because they are non-parallel.
+            </p>
+        </proof>
+        
+
+
+
+        <subsection xml:id="eigenvalue-method-one">
+            <title>The Eigenvalue/Eigenvector Method</title>
+        <p>
+            
+        </p>
+        <algorithm xml:id="Real-Distinct">
+            <title>Eigenvector Method with Real Distict Eigenvalues</title>
+            <p>
+                To solve 
+                <me>
+                    \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+                </me>
+                Proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Find the eigenpairs <m>(\lambda_1,\vec{v}_1)</m> and <m>(\lambda_2,\vec{v}_2)</m>. If <m>\lambda_1</m> and <m>\lambda_2</m> are real and distinct (not equal) proceed.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Form the general solution 
+                            <me>
+                                \vec{x}(t) = c_1e^{\lambda_1 t}\vec{v_1} +  c_2e^{\lambda_2 t}\vec{v_2}
+                            </me>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Solve for <m>c_1</m> and <m>c_2</m> using the initial conditions.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </algorithm>
+
+        <p>
+            To find eigenvalues and eigenvector, you can use this script:
+        </p>
+        <figure>
+    <caption>Finding symbolic eigenvectors with Python</caption>
+<sage  xml:id="sage-sympy-eigs" language="python">
+<input>
+from sympy import Matrix
+import sympy as sp
+
+#define your matrix
+A = Matrix([[-2,-1],[0,3]])
+
+eigs = A.eigenvects()
+
+#format of output is eigenvalue, multiplicity, eigenvector
+
+print(f"Eigenvectors using Sympy:")
+
+sp.pprint(eigs)
+
+</input>
+</sage>
+</figure>
+        
+        
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

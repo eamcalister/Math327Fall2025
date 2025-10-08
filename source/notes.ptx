@@ -13,6 +13,7 @@
     <xi:include href="./notes/FirstOrderLinear.ptx" />
     <xi:include href="./notes/Separable.ptx" />
     <xi:include href="./notes/NumericalMethods.ptx" />
+    <xi:include href="./notes/SystemDistinctReal.ptx" />
 
 
     <!-- Add more xi:include files here to include them in the main course -->
