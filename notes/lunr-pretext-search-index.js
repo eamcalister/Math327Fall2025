@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3",
   "title": "Solution Technique 3: Some Numerical Methods",
-  "body": " Solution Technique 3: Some Numerical Methods  Numerical methods of solving ODEs give you approximate outputs of solutions to initial value problems for inputs of your choosing. Numerical methods are frequently used when no analytic method (e.g. separation of variables or integrating factors) works to find formulas for solutions.  The most basic numerical method is to approximately follow the slope field from the initial condition point.   Euler's Method  The value, of the solution to the IVP at the value is approximately   The following code executes a Python script for Euler's Method.  Euler's Method with Python    Euler's Method is effectively an implicit version of using a left-hand Riemann sum to solve an ODE. In fact, to evaluate for the IVP Euler's Method is exactly the left-hand Riemann sum for An improvement to Euler's Method, similarly based on the trapezoid rule, is given below.   Improved Euler's Method  The value, of the solution to the IVP at the value is approximately where and     Improved Euler's Method with Python    A more advanced, but harder to justify, technique is known as the fourth-order Runge-Kutta (RK4) algorithm.   RK4 with Python    The order of a numerical method is the approximate exponent of the step size when evaluating the error from the exact value. That is, if we are trying to estimate for the ODE then we define the error at to be If an approximation is -th order, then for some constant , which depends of the ODE and the numerical method being used.  Euler's Method is a first order method, Improved Euler's is second, and (surprise!) RK4 is a fourth order method.  "
+  "body": " Solution Technique 3: Some Numerical Methods  Numerical methods of solving ODEs give you approximate outputs of solutions to initial value problems for inputs of your choosing. Numerical methods are frequently used when no analytic method (e.g. separation of variables or integrating factors) works to find formulas for solutions.  The most basic numerical method is to approximately follow the slope field from the initial condition point.   Euler's Method  The value, of the solution to the IVP at the value is approximately   The following code executes a Python script for Euler's Method.  Euler's Method with Python    Euler's Method is effectively an implicit version of using a left-hand Riemann sum to solve an ODE. In fact, to evaluate for the IVP Euler's Method is exactly the left-hand Riemann sum for An improvement to Euler's Method, similarly based on the trapezoid rule, is given below.   Euler's Method  The value, of the solution to the IVP at the value is approximately where and     Improved Euler's Method with Python    A more advanced, but harder to justify, technique is known as the fourth-order Runge-Kutta (RK4) algorithm.   RK4 with Python    The order of a numerical method is the approximate exponent of the step size when evaluating the error from the exact value. That is, if we are trying to estimate for the ODE then we define the error to be  "
 },
 {
   "id": "eulers-method",
@@ -141,8 +141,8 @@ var ptx_lunr_docs = [
   "url": "numerical-methods.html#improved-eulers-method",
   "type": "Solution Method",
   "number": "3.3",
-  "title": "Improved Euler’s Method.",
-  "body": " Improved Euler's Method  The value, of the solution to the IVP at the value is approximately where and   "
+  "title": "Euler’s Method.",
+  "body": " Euler's Method  The value, of the solution to the IVP at the value is approximately where and   "
 },
 {
   "id": "numerical-methods-8",
@@ -178,7 +178,70 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "order error at "
+  "body": "order error "
+},
+{
+  "id": "linear-distinct-real",
+  "level": "1",
+  "url": "linear-distinct-real.html",
+  "type": "Section",
+  "number": "4",
+  "title": "Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues",
+  "body": " Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix relies on two initial facts (they scale up for general matrices).   The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .     (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.    Non-Parallel Initial Values Build the General Solution   If and are solutions to with and non-parallel, then the general solution to the system has the form      (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Real Distict Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.      To find eigenvalues and eigenvector, you can use this script:   Finding symbolic eigenvectors with Python     "
+},
+{
+  "id": "superposition",
+  "level": "2",
+  "url": "linear-distinct-real.html#superposition",
+  "type": "Theorem",
+  "number": "4.1",
+  "title": "The Superposition Theorem.",
+  "body": " The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .   "
+},
+{
+  "id": "linear-distinct-real-4",
+  "level": "2",
+  "url": "linear-distinct-real.html#linear-distinct-real-4",
+  "type": "Proof",
+  "number": "4.1",
+  "title": "",
+  "body": " (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.  "
+},
+{
+  "id": "linear-independence",
+  "level": "2",
+  "url": "linear-distinct-real.html#linear-independence",
+  "type": "Theorem",
+  "number": "4.2",
+  "title": "Non-Parallel Initial Values Build the General Solution.",
+  "body": " Non-Parallel Initial Values Build the General Solution   If and are solutions to with and non-parallel, then the general solution to the system has the form    "
+},
+{
+  "id": "linear-distinct-real-6",
+  "level": "2",
+  "url": "linear-distinct-real.html#linear-distinct-real-6",
+  "type": "Proof",
+  "number": "4.2",
+  "title": "",
+  "body": " (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.  "
+},
+{
+  "id": "Real-Distinct",
+  "level": "2",
+  "url": "linear-distinct-real.html#Real-Distinct",
+  "type": "Solution Method",
+  "number": "4.3",
+  "title": "Eigenvector Method with Real Distict Eigenvalues.",
+  "body": " Eigenvector Method with Real Distict Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.     "
+},
+{
+  "id": "eigenvalue-method-one-5",
+  "level": "2",
+  "url": "linear-distinct-real.html#eigenvalue-method-one-5",
+  "type": "Figure",
+  "number": "4.4",
+  "title": "",
+  "body": " Finding symbolic eigenvectors with Python   "
 }
 ]
 
