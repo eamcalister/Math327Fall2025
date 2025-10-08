@@ -187,7 +187,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4",
   "title": "Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues",
-  "body": " Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix relies on two initial facts (they scale up for general matrices).   The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .     (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.    Non-Parallel Initial Values Build the General Solution   If and are solutions to with and non-parallel, then the general solution to the system has the form      (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Real Distict Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.      To find eigenvalues and eigenvector, you can use this script:   Finding symbolic eigenvectors with Python     "
+  "body": " Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix relies on two initial facts (they scale up for general matrices).   The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .     (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.    Non-Parallel Initial Values Create a Fundamental Solution Set   If and are solutions to with and non-parallel (i.e. linearly independent), then the general solution to the system has the form That is, is a fundamental solution set.     (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Real Distict Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.      To find eigenvalues and eigenvector, you can use this script:   Finding symbolic eigenvectors with Python     "
 },
 {
   "id": "superposition",
@@ -213,8 +213,8 @@ var ptx_lunr_docs = [
   "url": "linear-distinct-real.html#linear-independence",
   "type": "Theorem",
   "number": "4.2",
-  "title": "Non-Parallel Initial Values Build the General Solution.",
-  "body": " Non-Parallel Initial Values Build the General Solution   If and are solutions to with and non-parallel, then the general solution to the system has the form    "
+  "title": "Non-Parallel Initial Values Create a Fundamental Solution Set.",
+  "body": " Non-Parallel Initial Values Create a Fundamental Solution Set   If and are solutions to with and non-parallel (i.e. linearly independent), then the general solution to the system has the form That is, is a fundamental solution set.   "
 },
 {
   "id": "linear-distinct-real-6",
