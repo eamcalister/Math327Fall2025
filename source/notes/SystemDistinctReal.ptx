@@ -64,7 +64,7 @@
             
         </p>
         <algorithm xml:id="Real-Distinct">
-            <title>Eigenvector Method with Real Distict Eigenvalues</title>
+            <title>Eigenvector Method with Real Distinct Eigenvalues</title>
             <p>
                 To solve 
                 <me>
