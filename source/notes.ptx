@@ -14,6 +14,7 @@
     <xi:include href="./notes/Separable.ptx" />
     <xi:include href="./notes/NumericalMethods.ptx" />
     <xi:include href="./notes/SystemDistinctReal.ptx" />
+    <xi:include href="./notes/SystemsComplex.ptx" />
 
 
     <!-- Add more xi:include files here to include them in the main course -->

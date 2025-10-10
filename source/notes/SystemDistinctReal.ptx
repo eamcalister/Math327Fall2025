@@ -70,7 +70,7 @@
                 <me>
                     \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
                 </me>
-                Proceed as follows:
+                proceed as follows:
                 <ol>
                     <li>
                         <p>
@@ -100,7 +100,7 @@
         </p>
         <figure>
     <caption>Finding symbolic eigenvectors with Python</caption>
-<sage  xml:id="sage-sympy-eigs" language="python">
+<sage xml:id="sage-sympy-eigs" language="python">
 <input>
 from sympy import Matrix
 import sympy as sp
@@ -112,9 +112,9 @@ eigs = A.eigenvects()
 
 #format of output is eigenvalue, multiplicity, eigenvector
 
-print(f"Eigenvectors using Sympy:")
+print(f"Eigenpairs using Sympy:")
 
-sp.pprint(eigs)
+print(eigs)
 
 </input>
 </sage>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="linear-complex">
+        <title>Solution Technique 4b: Linear Systems with Complex Eigenvalues</title>
+        <p>
+            The eigenvalue method for solving a system IVP of the form
+            <me>
+                \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+            </me>
+            where <m>A</m> is a <m>2\times 2</m> matrix with complex eigenvalues begins the same way as with real eigenvalues: first, find the eigenpairs using the Sage Cell below (same as previous, but pre-loaded with a complex eigenvalue matrix). 
+                    <figure>
+    <caption>Finding symbolic eigenvectors with Python</caption>
+<sage xml:id="sage-sympy-eigs-complex" language="python">
+<input>
+from sympy import Matrix
+import sympy as sp
+
+#define your matrix
+A = Matrix([[0,1],[-8,-4]])
+
+eigs = A.eigenvects()
+
+#format of output is eigenvalue, multiplicity, eigenvector
+
+print(f"Eigenpairs using Sympy:")
+
+print(eigs)
+
+</input>
+</sage>
+</figure>
+            
+            
+            From there, we need two key facts.
+        </p>
+        <theorem xml:id="eulers-formula">
+            <title>Euler's Formula</title>
+            <statement>
+                <p>
+                    The complex exponential is defined
+                    <me>
+                        e^{(a+bi)t} = e^{at}(\cos(bt) + i\sin(bt)).
+                    </me>
+                    Using this definition, all properties of the exponential function that are relevant to differential equations are still true. Specifically,
+                    <me>
+                        \frac{d}{dt}(e^{\lambda t}) = \lambda e^{\lambda t}
+                    </me>
+                    even if <m>\lambda</m> is complex.
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                (Sketch) This is really more of a well-motivated definition than a theorem. However, one can verify that the differentiation formula holds, assuming multiplication by <m>i</m> factors through differentiation as with real numbers. 
+            </p>
+        </proof>
+
+        <theorem xml:id="Real-Imaginary-Parts">
+            <title>The Real and Imaginary Parts of a Solution to the System are Solutions Themselves</title>
+            <statement>
+                <p>
+                    Let <me>\vec{x}_C(t) = \vec{u}(t) + i\vec{w}(t)</me>, where <m>\vec{u}(t)</m> and <m>\vec{w}(t)</m> are real-valued. That is, <me>\vec{u}(t) = \mathrm{Re}(\vec{x}_C(t))</me> and <me>\vec{w}(t) = \mathrm{Im}(\vec{x}_C(t)) </me>. If <m>\vec{x}_C(t)</m> is a solution to <me>\vec{x}' = A\vec{x}</me>, then so are <m>\vec{u}(t)</m> and <m>\vec{w}(t)</m>.
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                (Sketch) Observe that
+                <me>
+                    \vec{x}'_C(t) = \vec{u}'(t) + i\vec{w}'(t)
+                </me>
+                and
+                <me>
+                    A\vec{x}_C(t) = A\vec{u}(t) + iA\vec{w}'(t).
+                </me>
+                Since <m>\vec{x}'_C(t) = A\vec{x}_C(t)</m>, we may equate real and imaginary parts of right-hand sides of the above equations to obtain the result. 
+            </p>
+        </proof>
+        
+
+
+
+        <subsection xml:id="eigenvalue-method-two">
+            <title>The Eigenvalue/Eigenvector Method</title>
+        <p>
+            
+        </p>
+        <algorithm xml:id="complex-eigs">
+            <title>Eigenvector Method with Complex Eigenvalues</title>
+            <p>
+                To solve 
+                <me>
+                    \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+                </me>
+                when <m>A</m> has complex eigenvalues, proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Pick one complex eigenpair,
+                            <me>
+                                \lambda = a+bi, \vec{v} = \vec{u} + i\vec{w}.
+                            </me>
+                            Using Euler's Formula, expand
+                            <me>
+                                \vec{x}_C(t) = e^{\lambda t}\vec{v} = e^{at}(\cos(bt) + i\sin(bt))(\vec{u} + i\vec{w})
+                            </me>
+                            and group into real and imaginary parts. Let 
+                            <me>
+                                \vec{x}_1(t) = \mathrm{Re}(\vec{x}_C(t)) \text{ and } \vec{x}_1(t) = \mathrm{Im}(\vec{x}_C(t)).
+                            </me>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Form the general solution 
+                            <me>
+                                \vec{x}(t) = c_1\vec{x}_1(t) +  c_2\vec{x}_1(t)
+                            </me>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Solve for <m>c_1</m> and <m>c_2</m> using the initial conditions.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </algorithm>
+        
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->
