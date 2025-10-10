@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Solution Technique 3: Some Numerical Methods</title>
+<title>Solution Technique 4b: Linear Systems with Complex Eigenvalues</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -165,7 +165,7 @@ sagecell.makeSagecell({
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="separable.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="linear-distinct-real.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="linear-distinct-real.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -189,199 +189,175 @@ sagecell.makeSagecell({
 <div class="toc-title-box"><a href="separable.html" class="internal"><span class="codenumber">2</span> <span class="title">Solution Technique 2: Separable First-Order ODEs</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="separable.html#separation-of-variables" class="internal"><span class="title">The Separation of Variables Method</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="numerical-methods.html" class="internal"><span class="codenumber">3</span> <span class="title">Solution Technique 3: Some Numerical Methods</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="numerical-methods.html" class="internal"><span class="codenumber">3</span> <span class="title">Solution Technique 3: Some Numerical Methods</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear-distinct-real.html" class="internal"><span class="codenumber">4</span> <span class="title">Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear-distinct-real.html#eigenvalue-method-one" class="internal"><span class="title">The Eigenvalue/Eigenvector Method</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="linear-complex.html" class="internal"><span class="codenumber">5</span> <span class="title">Solution Technique 4b: Linear Systems with Complex Eigenvalues</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear-complex.html#eigenvalue-method-two" class="internal"><span class="title">The Eigenvalue/Eigenvector Method</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear-complex.html#eigenvalue-method-two" class="internal"><span class="title">The Eigenvalue/Eigenvector Method</span></a></div></li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="numerical-methods"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Solution Technique 3: Some Numerical Methods</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linear-complex"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">Solution Technique 4b: Linear Systems with Complex Eigenvalues</span>
 </h2>
-<div class="para" id="numerical-methods-2">Numerical methods of solving ODEs give you approximate outputs of solutions to initial value problems for inputs of your choosing. Numerical methods are frequently used when no analytic method (e.g. separation of variables or integrating factors) works to find formulas for solutions.<div class="autopermalink" data-description="Paragraph"><a href="#numerical-methods-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="numerical-methods-3">The most basic numerical method is to approximately follow the slope field from the initial condition point.<div class="autopermalink" data-description="Paragraph"><a href="#numerical-methods-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="algorithm theorem-like" id="eulers-method"><h3 class="heading">
-<span class="type">Solution Method</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Method.</span>
-</h3>
-<div class="para logical" id="eulers-method-2">
-<div class="para">The value, <span class="process-math">\(y_{i+1} = y(t_0 + (i+1)h)\)</span> of the solution to the IVP</div>
+<div class="para logical" id="linear-complex-2">
+<div class="para">The eigenvalue method for solving a system IVP of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-y' = f(t,y), y(t_0) = y_0
+\vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
 \end{equation*}
 </div>
-<div class="para">at the value <span class="process-math">\(t_i = ih\)</span> is approximately</div>
-<div class="displaymath process-math">
-\begin{equation*}
-y_i = y_{i-1} + f(t_{i-1},y_{i-1})h.
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eulers-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution Method 3.1: Euler’s Method"><a href="#eulers-method" title="Copy heading and permalink for Solution Method 3.1: Euler’s Method" aria-label="Copy heading and permalink for Solution Method 3.1: Euler’s Method">🔗</a></div></article><figure class="figure figure-like" id="numerical-methods-5"><div id="sage-python-euler" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import numpy as np
-# Don't modify this.
-def euler_method(f, y0, t0, tf, h):
-    t = np.arange(t0, tf + h, h)
-    y = np.zeros(len(t))
-    y[0] = y0
-    for i in range(1, len(t)):
-        y[i] = y[i-1] + h * f(t[i-1], y[i-1])
-    return t, y
+<div class="para">where <span class="process-math">\(A\)</span> is a <span class="process-math">\(2\times 2\)</span> matrix with complex eigenvalues begins the same way as with real eigenvalues: first, find the eigenpairs using the Sage Cell below (same as previous, but pre-loaded with a complex eigenvalue matrix). <figure class="figure figure-like" id="linear-complex-2-4"><div id="sage-sympy-eigs-complex" class="ptx-sagecell sagecell-python"><script type="text/x-sage">from sympy import Matrix
+import sympy as sp
 
-# Modify starting here.
-# Define the differential equation dy/dt = f(t, y)
-def f(t, y):
-    return  y
+#define your matrix
+A = Matrix([[0,1],[-8,-4]])
 
-# Initial conditions
-y0 = 1
-t0 = 0
-tf = 1
-h = .1
+eigs = A.eigenvects()
 
+#format of output is eigenvalue, multiplicity, eigenvector
 
-# Solve using Euler's method
-t_euler, y_euler = euler_method(f, y0, t0, tf, h)
+print(f"Eigenpairs using Sympy:")
 
-    
-#print the final output of Euler's Method
-print(f"Using Euler's Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
-print(y_euler[len(y_euler)-1])
+print(eigs)
 </script></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2<span class="period">.</span></span><span class="space"> </span>Euler’s Method with Python<div class="autopermalink" data-description="Figure 3.2"><a href="#numerical-methods-5" title="Copy heading and permalink for Figure 3.2" aria-label="Copy heading and permalink for Figure 3.2">🔗</a></div></figcaption></figure><div class="para logical" id="numerical-methods-6">
-<div class="para">Euler’s Method is effectively an implicit version of using a left-hand Riemann sum to solve an ODE. In fact, to evaluate <span class="process-math">\(u(b)\)</span> for the IVP</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u' = f(t), u(a)= 0,
-\end{equation*}
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1<span class="period">.</span></span><span class="space"> </span>Finding symbolic eigenvectors with Python<div class="autopermalink" data-description="Figure 5.1"><a href="#linear-complex-2-4" title="Copy heading and permalink for Figure 5.1" aria-label="Copy heading and permalink for Figure 5.1">🔗</a></div></figcaption></figure> From there, we need two key facts.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#linear-complex-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Euler’s Method is exactly the left-hand Riemann sum for</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u(b) = u(a) + \int_{a}^b f(t)\,dt.
-\end{equation*}
-</div>
-<div class="para">An improvement to Euler’s Method, similarly based on the trapezoid rule, is given below.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#numerical-methods-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="algorithm theorem-like" id="improved-eulers-method"><h3 class="heading">
-<span class="type">Solution Method</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Method.</span>
+<article class="theorem theorem-like" id="eulers-formula"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Formula.</span>
 </h3>
-<div class="para logical" id="improved-eulers-method-2">
-<div class="para">The value, <span class="process-math">\(y_{i+1} = y(t_0 + (i+1)h)\)</span> of the solution to the IVP</div>
+<div class="para logical" id="eulers-formula-2-1">
+<div class="para">The complex exponential is defined</div>
 <div class="displaymath process-math">
 \begin{equation*}
-y' = f(t,y), y(t_0) = u_0
+e^{(a+bi)t} = e^{at}(\cos(bt) + i\sin(bt)).
 \end{equation*}
 </div>
-<div class="para">at the value <span class="process-math">\(t_i = ih\)</span> is approximately</div>
+<div class="para">Using this definition, all properties of the exponential function that are relevant to differential equations are still true. Specifically,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-y_i = y_{i-1} + mh,
+\frac{d}{dt}(e^{\lambda t}) = \lambda e^{\lambda t}
 \end{equation*}
 </div>
-<div class="para">where</div>
+<div class="para">even if <span class="process-math">\(\lambda\)</span> is complex.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eulers-formula-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.2: Euler’s Formula"><a href="#eulers-formula" title="Copy heading and permalink for Theorem 5.2: Euler’s Formula" aria-label="Copy heading and permalink for Theorem 5.2: Euler’s Formula">🔗</a></div></article><details id="linear-complex-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="linear-complex-4-1">(Sketch) This is really more of a well-motivated definition than a theorem. However, one can verify that the differentiation formula holds, assuming multiplication by <span class="process-math">\(i\)</span> factors through differentiation as with real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#linear-complex-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.1"><a href="#linear-complex-4" title="Copy heading and permalink for Proof 5.1" aria-label="Copy heading and permalink for Proof 5.1">🔗</a></div></article></details><article class="theorem theorem-like" id="Real-Imaginary-Parts"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Real and Imaginary Parts of a Solution to the System are Solutions Themselves.</span>
+</h3>
+<div class="para logical" id="Real-Imaginary-Parts-2-1">
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-m = \frac{f(t_i,y_i)+f(t_i,w)}{2}
+\vec{x}_C(t) = \vec{u}(t) + i\vec{w}(t)\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\vec{u}(t)\)</span> and <span class="process-math">\(\vec{w}(t)\)</span> are real-valued. That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{u}(t) = \mathrm{Re}(\vec{x}_C(t))
 \end{equation*}
 </div>
 <div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-w = y_{i-1} + f(t_{i-1},y_{i-1})h.
+\vec{w}(t) = \mathrm{Im}(\vec{x}_C(t)) \text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#improved-eulers-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution Method 3.3: Euler’s Method"><a href="#improved-eulers-method" title="Copy heading and permalink for Solution Method 3.3: Euler’s Method" aria-label="Copy heading and permalink for Solution Method 3.3: Euler’s Method">🔗</a></div></article><figure class="figure figure-like" id="numerical-methods-8"><div id="sage-python-improved-euler" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import numpy as np
-# Don't modify this.
-def improved_euler(f, y0, t0, tf, h):
-    t = np.arange(t0, tf + h, h)
-    y = np.zeros(len(t))
-    y[0] = y0
-    for i in range(1, len(t)):
-        w = y[i-1] + h * f(t[i-1], y[i-1])
-        y[i] = y[i-1] + h * (f(t[i-1], y[i-1])+f(t[i],w))/2
-    return t, y
-
-# Modify starting here.
-# Define the differential equation dy/dt = f(t, y)
-def f(t, y):
-    return y
-
-# Initial conditions
-y0 = 1
-t0 = 0
-tf = 1
-h = .1
-
-
-# Solve using Improved Euler's method
-
-t_improved_euler, y_improved_euler = improved_euler(f, y0, t0, tf, h)
-
-    
-#print the final output of Euler's Method
-print(f"Using Improved Euler's Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
-print(y_improved_euler[len(y_improved_euler)-1])
-</script></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4<span class="period">.</span></span><span class="space"> </span>Improved Euler’s Method with Python<div class="autopermalink" data-description="Figure 3.4"><a href="#numerical-methods-8" title="Copy heading and permalink for Figure 3.4" aria-label="Copy heading and permalink for Figure 3.4">🔗</a></div></figcaption></figure><div class="para" id="numerical-methods-9">A more advanced, but harder to justify, technique is known as the <dfn class="terminology">fourth-order Runge-Kutta (RK4)</dfn> algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#numerical-methods-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<figure class="figure figure-like" id="numerical-methods-10"><div id="sage-python-RK4" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import numpy as np
-# Don't modify this.
-def runge_kutta_4(f, y0, t0, tf, h):
-    t = np.arange(t0, tf + h, h)
-    y = np.zeros(len(t))
-    y[0] = y0
-    for i in range(1, len(t)):
-        k1 = h * f(t[i-1], y[i-1])
-        k2 = h * f(t[i-1] + 0.5*h, y[i-1] + 0.5*k1)
-        k3 = h * f(t[i-1] + 0.5*h, y[i-1] + 0.5*k2)
-        k4 = h * f(t[i-1] + h, y[i-1] + k3)
-        y[i] = y[i-1] + (k1 + 2*k2 + 2*k3 + k4) / 6
-    return t, y
-
-# Modify starting here.
-# Define the differential equation dy/dt = f(t, y)
-def f(t, y):
-    return y
-
-# Initial conditions
-y0 = 1
-t0 = 0
-tf = 1
-h = .1
-
-
-# Solve using Runge-Kutta 4th order method
-
-t_rk4, y_rk4 = runge_kutta_4(f, y0, t0, tf, h)
-
-    
-#print the final output of rk4
-print(f"Using the RK4 Method with the initial condition y({t0}) = {y0}, y({tf}) = ")
-print(y_rk4[len(y_rk4)-1])
-</script></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5<span class="period">.</span></span><span class="space"> </span>RK4 with Python<div class="autopermalink" data-description="Figure 3.5"><a href="#numerical-methods-10" title="Copy heading and permalink for Figure 3.5" aria-label="Copy heading and permalink for Figure 3.5">🔗</a></div></figcaption></figure><div class="para logical" id="numerical-methods-11">
-<div class="para">The <dfn class="terminology">order</dfn> of a numerical method is the approximate exponent of the step size <span class="process-math">\(h\)</span> when evaluating the error from the exact value. That is, if we are trying to estimate <span class="process-math">\(y(b)\)</span> for the ODE</div>
+<div class="para">If <span class="process-math">\(\vec{x}_C(t)\)</span> is a solution to</div>
 <div class="displaymath process-math">
 \begin{equation*}
-y' = f(t,y), y(t_0) = y_0,
+\vec{x}' = A\vec{x}\text{,}
 \end{equation*}
 </div>
-<div class="para">then we define the <dfn class="terminology">error</dfn> to be</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#numerical-methods-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">then so are <span class="process-math">\(\vec{u}(t)\)</span> and <span class="process-math">\(\vec{w}(t)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Section 3: Solution Technique 3: Some Numerical Methods"><a href="#numerical-methods" title="Copy heading and permalink for Section 3: Solution Technique 3: Some Numerical Methods" aria-label="Copy heading and permalink for Section 3: Solution Technique 3: Some Numerical Methods">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Real-Imaginary-Parts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.3: The Real and Imaginary Parts of a Solution to the System are Solutions Themselves"><a href="#Real-Imaginary-Parts" title="Copy heading and permalink for Theorem 5.3: The Real and Imaginary Parts of a Solution to the System are Solutions Themselves" aria-label="Copy heading and permalink for Theorem 5.3: The Real and Imaginary Parts of a Solution to the System are Solutions Themselves">🔗</a></div></article><details id="linear-complex-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="linear-complex-6-1">
+<div class="para">(Sketch) Observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}'_C(t) = \vec{u}'(t) + i\vec{w}'(t)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x}_C(t) = A\vec{u}(t) + iA\vec{w}'(t).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\vec{x}'_C(t) = A\vec{x}_C(t)\text{,}\)</span> we may equate real and imaginary parts of right-hand sides of the above equations to obtain the result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#linear-complex-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.2"><a href="#linear-complex-6" title="Copy heading and permalink for Proof 5.2" aria-label="Copy heading and permalink for Proof 5.2">🔗</a></div></article></details><section class="subsection" id="eigenvalue-method-two"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">The Eigenvalue/Eigenvector Method</span>
+</h3>
+<div class="para" id="eigenvalue-method-two-2"><div class="autopermalink" data-description="Paragraph"><a href="#eigenvalue-method-two-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="algorithm theorem-like" id="complex-eigs"><h4 class="heading">
+<span class="type">Solution Method</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Eigenvector Method with Complex Eigenvalues.</span>
+</h4>
+<div class="para logical" id="complex-eigs-2">
+<div class="para">To solve</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+\end{equation*}
+</div>
+<div class="para">when <span class="process-math">\(A\)</span> has complex eigenvalues, proceed as follows:</div>
+<ol class="decimal" id="complex-eigs-2-3">
+<li id="complex-eigs-2-3-1">
+<div class="para logical" id="complex-eigs-2-3-1-1">
+<div class="para">Pick one complex eigenpair,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda = a+bi, \vec{v} = \vec{u} + i\vec{w}.
+\end{equation*}
+</div>
+<div class="para">Using Euler’s Formula, expand</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}_C(t) = e^{\lambda t}\vec{v} = e^{at}(\cos(bt) + i\sin(bt))(\vec{u} + i\vec{w})
+\end{equation*}
+</div>
+<div class="para">and group into real and imaginary parts. Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}_1(t) = \mathrm{Re}(\vec{x}_C(t)) \text{ and } \vec{x}_1(t) = \mathrm{Im}(\vec{x}_C(t)).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#complex-eigs-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#complex-eigs-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="complex-eigs-2-3-2">
+<div class="para logical" id="complex-eigs-2-3-2-1">
+<div class="para">Form the general solution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}(t) = c_1\vec{x}_1(t) +  c_2\vec{x}_1(t)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#complex-eigs-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#complex-eigs-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="complex-eigs-2-3-3">
+<div class="para" id="complex-eigs-2-3-3-1">Solve for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> using the initial conditions.<div class="autopermalink" data-description="Paragraph"><a href="#complex-eigs-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#complex-eigs-2-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#complex-eigs-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution Method 5.4: Eigenvector Method with Complex Eigenvalues"><a href="#complex-eigs" title="Copy heading and permalink for Solution Method 5.4: Eigenvector Method with Complex Eigenvalues" aria-label="Copy heading and permalink for Solution Method 5.4: Eigenvector Method with Complex Eigenvalues">🔗</a></div></article><div class="autopermalink" data-description="Subsection: The Eigenvalue/Eigenvector Method"><a href="#eigenvalue-method-two" title="Copy heading and permalink for Subsection: The Eigenvalue/Eigenvector Method" aria-label="Copy heading and permalink for Subsection: The Eigenvalue/Eigenvector Method">🔗</a></div></section><div class="autopermalink" data-description="Section 5: Solution Technique 4b: Linear Systems with Complex Eigenvalues"><a href="#linear-complex" title="Copy heading and permalink for Section 5: Solution Technique 4b: Linear Systems with Complex Eigenvalues" aria-label="Copy heading and permalink for Section 5: Solution Technique 4b: Linear Systems with Complex Eigenvalues">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="separable.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="linear-distinct-real.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="linear-distinct-real.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

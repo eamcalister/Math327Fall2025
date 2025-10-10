@@ -187,7 +187,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4",
   "title": "Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues",
-  "body": " Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix relies on two initial facts (they scale up for general matrices).   The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .     (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.    Non-Parallel Initial Values Create a Fundamental Solution Set   If and are solutions to with and non-parallel (i.e. linearly independent), then the general solution to the system has the form That is, is a fundamental solution set.     (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Real Distinct Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.      To find eigenvalues and eigenvector, you can use this script:   Finding symbolic eigenvectors with Python     "
+  "body": " Solution Technique 4a: Linear Systems with Distinct Real Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix relies on two initial facts (they scale up for general matrices).   The Superposition Theorem   If and are solutions to then so is the linear combination for any constants and .     (Sketch) This follows from the fact that the differential operator and matrix multiplication by are both linear.    Non-Parallel Initial Values Create a Fundamental Solution Set   If and are solutions to with and non-parallel (i.e. linearly independent), then the general solution to the system has the form That is, is a fundamental solution set.     (Sketch) Observe that every vector is a linear combination of and because they are non-parallel.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Real Distinct Eigenvalues  To solve proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.      To find eigenvalues and eigenvector, you can use this script:   Finding symbolic eigenvectors with Python     "
 },
 {
   "id": "superposition",
@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Solution Method",
   "number": "4.3",
   "title": "Eigenvector Method with Real Distinct Eigenvalues.",
-  "body": " Eigenvector Method with Real Distinct Eigenvalues  To solve Proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.     "
+  "body": " Eigenvector Method with Real Distinct Eigenvalues  To solve proceed as follows:   Find the eigenpairs and . If and are real and distinct (not equal) proceed.    Form the general solution     Solve for and using the initial conditions.     "
 },
 {
   "id": "eigenvalue-method-one-5",
@@ -242,6 +242,69 @@ var ptx_lunr_docs = [
   "number": "4.4",
   "title": "",
   "body": " Finding symbolic eigenvectors with Python   "
+},
+{
+  "id": "linear-complex",
+  "level": "1",
+  "url": "linear-complex.html",
+  "type": "Section",
+  "number": "5",
+  "title": "Solution Technique 4b: Linear Systems with Complex Eigenvalues",
+  "body": " Solution Technique 4b: Linear Systems with Complex Eigenvalues  The eigenvalue method for solving a system IVP of the form where is a matrix with complex eigenvalues begins the same way as with real eigenvalues: first, find the eigenpairs using the Sage Cell below (same as previous, but pre-loaded with a complex eigenvalue matrix).  Finding symbolic eigenvectors with Python   From there, we need two key facts.   Euler's Formula   The complex exponential is defined Using this definition, all properties of the exponential function that are relevant to differential equations are still true. Specifically, even if is complex.     (Sketch) This is really more of a well-motivated definition than a theorem. However, one can verify that the differentiation formula holds, assuming multiplication by factors through differentiation as with real numbers.    The Real and Imaginary Parts of a Solution to the System are Solutions Themselves   Let , where and are real-valued. That is, and . If is a solution to , then so are and .     (Sketch) Observe that and Since , we may equate real and imaginary parts of right-hand sides of the above equations to obtain the result.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Complex Eigenvalues  To solve when has complex eigenvalues, proceed as follows:   Pick one complex eigenpair, Using Euler's Formula, expand and group into real and imaginary parts. Let     Form the general solution     Solve for and using the initial conditions.       "
+},
+{
+  "id": "linear-complex-2-4",
+  "level": "2",
+  "url": "linear-complex.html#linear-complex-2-4",
+  "type": "Figure",
+  "number": "5.1",
+  "title": "",
+  "body": " Finding symbolic eigenvectors with Python   "
+},
+{
+  "id": "eulers-formula",
+  "level": "2",
+  "url": "linear-complex.html#eulers-formula",
+  "type": "Theorem",
+  "number": "5.2",
+  "title": "Euler’s Formula.",
+  "body": " Euler's Formula   The complex exponential is defined Using this definition, all properties of the exponential function that are relevant to differential equations are still true. Specifically, even if is complex.   "
+},
+{
+  "id": "linear-complex-4",
+  "level": "2",
+  "url": "linear-complex.html#linear-complex-4",
+  "type": "Proof",
+  "number": "5.1",
+  "title": "",
+  "body": " (Sketch) This is really more of a well-motivated definition than a theorem. However, one can verify that the differentiation formula holds, assuming multiplication by factors through differentiation as with real numbers.  "
+},
+{
+  "id": "Real-Imaginary-Parts",
+  "level": "2",
+  "url": "linear-complex.html#Real-Imaginary-Parts",
+  "type": "Theorem",
+  "number": "5.3",
+  "title": "The Real and Imaginary Parts of a Solution to the System are Solutions Themselves.",
+  "body": " The Real and Imaginary Parts of a Solution to the System are Solutions Themselves   Let , where and are real-valued. That is, and . If is a solution to , then so are and .   "
+},
+{
+  "id": "linear-complex-6",
+  "level": "2",
+  "url": "linear-complex.html#linear-complex-6",
+  "type": "Proof",
+  "number": "5.2",
+  "title": "",
+  "body": " (Sketch) Observe that and Since , we may equate real and imaginary parts of right-hand sides of the above equations to obtain the result.  "
+},
+{
+  "id": "complex-eigs",
+  "level": "2",
+  "url": "linear-complex.html#complex-eigs",
+  "type": "Solution Method",
+  "number": "5.4",
+  "title": "Eigenvector Method with Complex Eigenvalues.",
+  "body": " Eigenvector Method with Complex Eigenvalues  To solve when has complex eigenvalues, proceed as follows:   Pick one complex eigenpair, Using Euler's Formula, expand and group into real and imaginary parts. Let     Form the general solution     Solve for and using the initial conditions.     "
 }
 ]
 
