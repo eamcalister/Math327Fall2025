@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="linear-repeated">
+        <title>Solution Technique 4c: Linear Systems with Repeated Eigenvalues</title>
+        <p>
+            Sometimes you need to solve IVP of the form
+            <me>
+                \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+            </me>
+            where <m>A</m> is a <m>2\times 2</m> matrix with only one eigenvalue and one linearly independent eigenvector. An example would be
+
+<me>
+    \begin{bmatrix}
+    x'\\
+    y'\end{bmatrix} = 
+    \begin{bmatrix} 2 &amp; -1 \\ 0 &amp; 2 \end{bmatrix} 
+    \begin{bmatrix} 2 \\ y\end{bmatrix}.
+</me>
+
+                    <figure>
+    <caption>Finding symbolic eigenvectors with Python</caption>
+<sage xml:id="sage-sympy-eigs-repeated" language="python">
+<input>
+from sympy import Matrix
+import sympy as sp
+
+#define your matrix
+A = Matrix([[2,-1],[0,2]])
+
+eigs = A.eigenvects()
+
+#format of output is eigenvalue, multiplicity, eigenvector
+
+print(f"Eigenpairs using Sympy:")
+
+print(eigs)
+
+</input>
+</sage>
+</figure>
+
+In such a case, you can't form two linearly independent solutions to build the generl solution. The most general solution we get is
+<me>
+    \vec{x}(t) = Ce^{2t}\begin{bmatrix} 1 \\ 0 \end{bmatrix}.
+</me>
+However, this system is partially decoupled and we can find the general solution
+<me>
+    \begin{bmatrix} x \\ y\end{bmatrix} =
+
+    k_1e^{2t}\begin{bmatrix} 1 \\ 0 \end{bmatrix} + k_2\left(e^{2t}\begin{bmatrix} 0\\ -1\end{bmatrix} + te^{2t}\begin{bmatrix} 1\\ 0\end{bmatrix}\right).
+</me>
+It turns out all repeated eigenvalue systems have a general solution of this form, we just need to know how to find the vectors.
+
+
+</p>
+            
+            
+
+        <theorem xml:id="Repeated-Generalized">
+            <title>General Solution with a Repeated Eigenvalue</title>
+            <statement>
+                <p>
+                    Consider the first-order system of ODEs given by
+                <me>
+                \vec{x}' = A\vec{x},
+                </me>
+                where <m>A</m> is a <m>2\times 2</m> matrix with only one eigenvalue <m>\lambda</m> and one linearly independent eigenvector <m>\vec{v}</m>. Then the general solution to this system has the form
+                <me>
+                    \vec{x}(t) = k_1e^{\lambda t}\vec{v} + k_2e^{\lambda t}\left(\vec{v}_1 + t\vec{v}\right),
+                </me>
+                where <m>\vec{v}_1</m> is a nonzero vector that satisfies <m>(A-\lambda I)\vec{v_1} = \vec{v}</m>.
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                First, observe that <m>(A-\lambda I)\vec{v_1} = \vec{v}</m> implies <m>\lambda\vec{v_1} + \vec{v} = A\vec{v}_1</m>. Hence we have
+                <md>
+                    <mrow>\frac{d}{dt}(e^{\lambda t}\left(\vec{v}_1 + t\vec{v}\right)) \amp = \lambda e^{\lambda t} \vec{v_1} + e^{\lambda t}\vec{v} + \lambda t e^{\lambda t}\vec{v}</mrow>
+                    <mrow> \amp = e^{\lambda t}(\lambda \vec{v}_1 +\vec{v}) + te^{\lambda t} Av</mrow>
+                    <mrow> \amp = e^{\lambda t}(A\vec{v_1}) + te^{\lambda t} Av </mrow>
+                    <mrow> \amp  = A(e^{\lambda t}\left(\vec{v}_1 + t\vec{v}\right)). </mrow>
+                </md>
+                Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because <m>\vec{v}</m> and <m>\vec{v}_1</m> are not zero, the two solutions are linearly independent at <m>t=0</m>. So, the generality of the solution follows.
+            </p>
+        </proof>
+        
+
+
+
+        <subsection xml:id="eigenvalue-method-three">
+            <title>The Eigenvalue/Eigenvector Method</title>
+        <p>
+            
+        </p>
+        <algorithm xml:id="repeated-eigs">
+            <title>Eigenvector Method with Complex Eigenvalues</title>
+            <p>
+                To solve 
+                <me>
+                    \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
+                </me>
+                when <m>A</m> has a repeated eigenvalue, proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Find an eigenpair <m>(\lambda,\vec{v})</m>. Then find a nonzero vector <m>\vec{v}_1</m> satisfying
+                            <m>(A-\lambda I)\vec{v_1} = \vec{v}</m>, where <m>I</m> is the <m>2\times 2</m> identity matrix.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Form the general solution 
+                            <me>
+                               \vec{x}(t) = k_1e^{\lambda t}\vec{v} + k_2e^{\lambda t}\left(\vec{v}_1 + t\vec{v}\right).
+                            </me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Solve for <m>k_1</m> and <m>k_2</m> using the initial conditions.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </algorithm>
+        
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

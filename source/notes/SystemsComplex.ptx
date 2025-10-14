@@ -73,7 +73,7 @@ print(eigs)
                 </me>
                 and
                 <me>
-                    A\vec{x}_C(t) = A\vec{u}(t) + iA\vec{w}'(t).
+                    A\vec{x}_C(t) = A\vec{u}(t) + iA\vec{w}(t).
                 </me>
                 Since <m>\vec{x}'_C(t) = A\vec{x}_C(t)</m>, we may equate real and imaginary parts of right-hand sides of the above equations to obtain the result. 
             </p>
