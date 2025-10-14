@@ -305,6 +305,51 @@ var ptx_lunr_docs = [
   "number": "5.4",
   "title": "Eigenvector Method with Complex Eigenvalues.",
   "body": " Eigenvector Method with Complex Eigenvalues  To solve when has complex eigenvalues, proceed as follows:   Pick one complex eigenpair, Using Euler's Formula, expand and group into real and imaginary parts. Let     Form the general solution     Solve for and using the initial conditions.     "
+},
+{
+  "id": "linear-repeated",
+  "level": "1",
+  "url": "linear-repeated.html",
+  "type": "Section",
+  "number": "6",
+  "title": "Solution Technique 4c: Linear Systems with Repeated Eigenvalues",
+  "body": " Solution Technique 4c: Linear Systems with Repeated Eigenvalues  Sometimes you need to solve IVP of the form where is a matrix with only one eigenvalue and one linearly independent eigenvector. An example would be   Finding symbolic eigenvectors with Python   In such a case, you can't form two linearly independent solutions to build the generl solution. The most general solution we get is However, this system is partially decoupled and we can find the general solution It turns out all repeated eigenvalue systems have a general solution of this form, we just need to know how to find the vectors.   General Solution with a Repeated Eigenvalue   Consider the first-order system of ODEs given by where is a matrix with only one eigenvalue and one linearly independent eigenvector . Then the general solution to this system has the form where is a nonzero vector that satisfies .     First, observe that implies . Hence we have Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Complex Eigenvalues  To solve when has a repeated eigenvalue, proceed as follows:   Find an eigenpair . Then find a nonzero vector satisfying , where is the identity matrix.    Form the general solution     Solve for and using the initial conditions.       "
+},
+{
+  "id": "linear-repeated-2-5",
+  "level": "2",
+  "url": "linear-repeated.html#linear-repeated-2-5",
+  "type": "Figure",
+  "number": "6.1",
+  "title": "",
+  "body": " Finding symbolic eigenvectors with Python   "
+},
+{
+  "id": "Repeated-Generalized",
+  "level": "2",
+  "url": "linear-repeated.html#Repeated-Generalized",
+  "type": "Theorem",
+  "number": "6.2",
+  "title": "General Solution with a Repeated Eigenvalue.",
+  "body": " General Solution with a Repeated Eigenvalue   Consider the first-order system of ODEs given by where is a matrix with only one eigenvalue and one linearly independent eigenvector . Then the general solution to this system has the form where is a nonzero vector that satisfies .   "
+},
+{
+  "id": "linear-repeated-4",
+  "level": "2",
+  "url": "linear-repeated.html#linear-repeated-4",
+  "type": "Proof",
+  "number": "6.1",
+  "title": "",
+  "body": " First, observe that implies . Hence we have Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.  "
+},
+{
+  "id": "repeated-eigs",
+  "level": "2",
+  "url": "linear-repeated.html#repeated-eigs",
+  "type": "Solution Method",
+  "number": "6.3",
+  "title": "Eigenvector Method with Complex Eigenvalues.",
+  "body": " Eigenvector Method with Complex Eigenvalues  To solve when has a repeated eigenvalue, proceed as follows:   Find an eigenpair . Then find a nonzero vector satisfying , where is the identity matrix.    Form the general solution     Solve for and using the initial conditions.     "
 }
 ]
 
