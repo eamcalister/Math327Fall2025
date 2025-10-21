@@ -313,7 +313,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6",
   "title": "Solution Technique 4c: Linear Systems with Repeated Eigenvalues",
-  "body": " Solution Technique 4c: Linear Systems with Repeated Eigenvalues  Sometimes you need to solve IVP of the form where is a matrix with only one eigenvalue and one linearly independent eigenvector. An example would be   Finding symbolic eigenvectors with Python   In such a case, you can't form two linearly independent solutions to build the generl solution. The most general solution we get is However, this system is partially decoupled and we can find the general solution It turns out all repeated eigenvalue systems have a general solution of this form, we just need to know how to find the vectors.   General Solution with a Repeated Eigenvalue   Consider the first-order system of ODEs given by where is a matrix with only one eigenvalue and one linearly independent eigenvector . Then the general solution to this system has the form where is a nonzero vector that satisfies .     First, observe that implies . Hence we have Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Complex Eigenvalues  To solve when has a repeated eigenvalue, proceed as follows:   Find an eigenpair . Then find a nonzero vector satisfying , where is the identity matrix.    Form the general solution     Solve for and using the initial conditions.       "
+  "body": " Solution Technique 4c: Linear Systems with Repeated Eigenvalues  Sometimes you need to solve IVP of the form where is a matrix with only one eigenvalue and one linearly independent eigenvector. An example would be   Finding symbolic eigenvectors with Python   In such a case, you can't form two linearly independent solutions to build the generl solution. The most general solution we get is However, this system is partially decoupled and we can find the general solution It turns out all repeated eigenvalue systems have a general solution of this form, we just need to know how to find the vectors.   General Solution with a Repeated Eigenvalue   Consider the first-order system of ODEs given by where is a matrix with only one eigenvalue and one linearly independent eigenvector . Then the general solution to this system has the form where is a nonzero vector that satisfies .     First, observe that implies . Hence we have Thus, the second part of the hypothesized general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.    The Eigenvalue\/Eigenvector Method     Eigenvector Method with Complex Eigenvalues  To solve when has a repeated eigenvalue, proceed as follows:   Find an eigenpair . Then find a nonzero vector satisfying , where is the identity matrix.    Form the general solution     Solve for and using the initial conditions.       "
 },
 {
   "id": "linear-repeated-2-5",
@@ -340,7 +340,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "6.1",
   "title": "",
-  "body": " First, observe that implies . Hence we have Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.  "
+  "body": " First, observe that implies . Hence we have Thus, the second part of the hypothesized general solution is a solution to the system. Moreover, because and are not zero, the two solutions are linearly independent at . So, the generality of the solution follows.  "
 },
 {
   "id": "repeated-eigs",
@@ -350,6 +350,24 @@ var ptx_lunr_docs = [
   "number": "6.3",
   "title": "Eigenvector Method with Complex Eigenvalues.",
   "body": " Eigenvector Method with Complex Eigenvalues  To solve when has a repeated eigenvalue, proceed as follows:   Find an eigenpair . Then find a nonzero vector satisfying , where is the identity matrix.    Form the general solution     Solve for and using the initial conditions.     "
+},
+{
+  "id": "SecondOrderHomogeneous",
+  "level": "1",
+  "url": "SecondOrderHomogeneous.html",
+  "type": "Section",
+  "number": "7",
+  "title": "Solution Technique 5: Linear Homogeneous Second-Order ODEs",
+  "body": " Solution Technique 5: Linear Homogeneous Second-Order ODEs  This note tells us how to solve constant-coefficient linear second-order homogeneous ODEs.  Suppose we wish to solve   We know how to rewrite this equation as a system of two first-order equations (called the companion system to the second-order equation) by making the substitution and : We solve this system using the eigenvalue method. To do so, we solve Observe that the first entry of the matrix product implies , hence will be an eigenvector for any eigenvalue of this matrix. Now plugging and in the second equation, we get This is equivalent to which we may solve using the quadratic formula. This yields the following three possibilities:   Case I:  If , there are two distinct real eigenvalues , with corresponding eigenvectors and . Since the solution we are looking for is (and is simply ), we write the general solution as Since is the function we want, the general solution of the original equation is (The system solution is still useful for solving initial value problems.)    Case II:  If , there are two distinct complex eigenvalues. Remember that we can build the general solution out of only one eigenvalue, say , and its corresponding eigenvector. Since we only care about the first component , we can write The real-valued solution to the system is given by Thus, we obtain the general solution of the original equation :     Case III:  If , we have one real (repeated) eigenvalue . We can still build a fundamental set of solutions and get the general solution of the form: Thus, the general solution of the original equation is    "
+},
+{
+  "id": "SecondOrderHomogeneous-4",
+  "level": "2",
+  "url": "SecondOrderHomogeneous.html#SecondOrderHomogeneous-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "companion system "
 }
 ]
 
