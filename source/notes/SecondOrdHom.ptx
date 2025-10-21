@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="SecondOrderHomogeneous">
+        <title>Solution Technique 5: Linear Homogeneous Second-Order ODEs</title>
+        <p>
+            This note tells us how to solve constant-coefficient linear second-order homogeneous ODEs.    
+        </p>
+        <p xml:id="equation1">
+            Suppose we wish to solve
+            <me>
+                ax'' + bx' + cx = 0.
+            </me>
+          </p>
+          <p>
+            We know how to rewrite this equation as a system of two first-order equations (called the <term>companion system</term> to the second-order equation) by making the substitution <m>x_1 = x</m> and <m>x_2 = x'</m>:
+            <me>
+                \left\lbrack
+        \begin{array}{r}
+          x_1'(t) \\
+          x_2'(t)
+        \end{array}
+      \right\rbrack
+      = 
+       \left\lbrack
+        \begin{array}{rr}
+          0 &amp; 1 \\
+          -\frac{c}{a} &amp; -\frac{b}{a}
+        \end{array}
+      \right\rbrack
+      \left\lbrack
+        \begin{array}{r}
+          x_1(t) \\
+          x_2(t)
+        \end{array}
+      \right\rbrack.
+            </me>
+        We solve this system using the eigenvalue method. To do so, we solve
+        <me>
+         \left\lbrack
+        \begin{array}{rr}
+          0 &amp; 1 \\
+          -\frac{c}{a} &amp; -\frac{b}{a}
+        \end{array}
+      \right\rbrack
+      \left\lbrack
+        \begin{array}{r}
+          u \\
+          v
+        \end{array}
+      \right\rbrack 
+      = 
+      \lambda\left\lbrack
+        \begin{array}{r}
+          u \\
+          v
+        \end{array}
+      \right\rbrack.   
+        </me>
+         Observe that the first entry of the matrix product implies <m>v = \lambda u</m>, hence <m>\vec{\mathbf{v}} = \left\lbrack
+        \begin{array}{r}
+          1 \\
+          \lambda
+        \end{array}
+      \right\rbrack</m>
+will be an eigenvector for any eigenvalue of this matrix. Now plugging <m>u = 1</m> and <m>\lambda = v</m> in the second equation, we get  
+<me>
+-\frac{c}{a} - \frac{b}{a}\lambda = \lambda^2.
+</me>
+This is equivalent to 
+<me>
+a\lambda^2 + b\lambda +c = 0,
+</me>
+which we may solve using the quadratic formula. This yields the following three possibilities:
+    </p>
+<subsection xml:id="overdamped">
+    <title>Case I: <m>b^2-4ac &gt; 0</m></title>
+<p>
+If <m>b^2 - 4ac &gt; 0</m>, there are two distinct real eigenvalues <m>\lambda_1</m>, <m>\lambda_2</m> with corresponding eigenvectors <m>\vec{\bf x}_1</m> and <m>\vec{\bf x}_2</m>.  Since the solution we are looking for is <m>x_1 = x</m> (and <m>x_2</m> is simply <m>x_1'</m>), we write the general solution as 
+<me>    
+     \left\lbrack
+        \begin{array}{r}
+          x_1(t) \\
+          x_2(t)
+        \end{array}
+      \right\rbrack
+      = 
+      c_1 e^{\lambda_1 t}       \left\lbrack
+        \begin{array}{r}
+          1 \\
+          \lambda_1
+        \end{array}
+      \right\rbrack
+      +
+      c_2 e^{\lambda_2 t}       \left\lbrack
+        \begin{array}{r}
+          1 \\
+          \lambda_2
+        \end{array}
+      \right\rbrack
+</me>
+Since <m>x(t)</m> is the function we want, the general solution of  <xref ref="equation1">the original equation</xref> is
+
+  
+<me>
+     x(t) = c_1e^{\lambda_1 t} + c_2e^{\lambda_2 t}. 
+</me>
+
+
+(The system solution is still useful for solving initial value problems.)    
+
+
+
+</p>
+
+
+    
+</subsection>
+
+<subsection xml:id="underdamped">
+    <title>Case II: <m>b^2-4ac &lt; 0</m></title>
+<p>
+    If <m>b^2 - 4ac &lt; 0</m>, there are two distinct complex eigenvalues.  Remember that we can build the general solution out of only one eigenvalue, say <m>\lambda_1 = \alpha+\beta i</m>, and its corresponding eigenvector.  Since we only care about the first component <m>x_1 = x</m>, we can write 
+<me>
+e^{(\alpha+\beta i)t}       \left\lbrack
+        \begin{array}{c}
+          1 \\
+         \alpha + \beta i
+        \end{array}
+      \right\rbrack   
+      =
+      e^{\alpha t} \left(
+            \left\lbrack
+        \begin{array}{c}
+          \cos(\beta t) \\
+          \alpha\cos(\beta t) -\beta\sin(\beta t)
+         \end{array}
+      \right\rbrack
+          + i
+         \left\lbrack
+        \begin{array}{c}
+          \sin(\beta t) \\
+          \beta\cos(\beta t) + \alpha\sin(\beta t)
+        \end{array}
+      \right\rbrack
+            \right).
+</me>
+The real-valued solution to the system is given by
+<me>
+   \left\lbrack
+        \begin{array}{r}
+          x_1(t) \\
+          x_2(t)
+        \end{array}
+      \right\rbrack
+      =
+      c_1 e^{\alpha t}
+            \left\lbrack
+        \begin{array}{c}
+          \cos(\beta t) \\
+          \alpha\cos(\beta t) -\beta\sin(\beta t)
+         \end{array}
+      \right\rbrack
+      +
+      c_1 e^{\alpha t}       
+      \left\lbrack
+        \begin{array}{c}
+          \sin(\beta t) \\
+          \beta\cos(\beta t) + \alpha\sin(\beta t)
+        \end{array}
+      \right\rbrack.
+</me>
+Thus, we obtain the general solution of  <xref ref="equation1">the original equation</xref>:
+<me> x(t) = e^{\alpha t} [ c_1\cos(\beta t) + c_2\sin(\beta t)].</me>
+</p>
+
+
+    
+</subsection>
+
+<subsection xml:id="crit-damped">
+  <title>Case III: <m>b^2-4ac = 0</m></title>
+<p>
+If <m>b^2 - 4ac = 0</m>, we have one real (repeated) eigenvalue <m>\lambda = -\frac{b}{2a}</m>.  We can still build a fundamental set of solutions and get the general solution of the form:
+<me>
+\left\lbrack
+        \begin{array}{r}
+          x_1(t) \\
+          x_2(t)
+        \end{array}
+      \right\rbrack
+      = 
+      c_1 e^{-\frac{b}{2a} t}       \left\lbrack
+        \begin{array}{r}
+          1 \\
+          -\frac{b}{2a}
+        \end{array}
+      \right\rbrack
+      +
+      c_2 \left( t e^{-\frac{b}{2a} t}       \left\lbrack
+        \begin{array}{r}
+          1 \\
+          -\frac{b}{2a}
+        \end{array}
+      \right\rbrack
+        +
+      e^{-\frac{b}{2a} t}       \left\lbrack
+        \begin{array}{r}
+          0 \\
+          1
+        \end{array}
+      \right\rbrack
+      \right)  
+</me>
+Thus, the general solution of  <xref ref="equation1">the original equation</xref> is
+<me>
+   x(t) = c_1e^{-\frac{b}{2a} t} + c_2t e^{-\frac{b}{2a} t}.
+</me>
+
+</p>
+  
+</subsection>
+   
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

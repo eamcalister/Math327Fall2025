@@ -83,7 +83,7 @@ It turns out all repeated eigenvalue systems have a general solution of this for
                     <mrow> \amp = e^{\lambda t}(A\vec{v_1}) + te^{\lambda t} Av </mrow>
                     <mrow> \amp  = A(e^{\lambda t}\left(\vec{v}_1 + t\vec{v}\right)). </mrow>
                 </md>
-                Thus, the second part of the hypothesised general solution is a solution to the system. Moreover, because <m>\vec{v}</m> and <m>\vec{v}_1</m> are not zero, the two solutions are linearly independent at <m>t=0</m>. So, the generality of the solution follows.
+                Thus, the second part of the hypothesized general solution is a solution to the system. Moreover, because <m>\vec{v}</m> and <m>\vec{v}_1</m> are not zero, the two solutions are linearly independent at <m>t=0</m>. So, the generality of the solution follows.
             </p>
         </proof>
         

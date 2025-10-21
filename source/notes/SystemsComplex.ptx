@@ -9,8 +9,8 @@
             <me>
                 \vec{x}' = A\vec{x}, \vec{x}(t_0) = \vec{x}_0,
             </me>
-            where <m>A</m> is a <m>2\times 2</m> matrix with complex eigenvalues begins the same way as with real eigenvalues: first, find the eigenpairs using the Sage Cell below (same as previous, but pre-loaded with a complex eigenvalue matrix). 
-                    <figure>
+            where <m>A</m> is a <m>2\times 2</m> matrix with complex eigenvalues begins the same way as with real eigenvalues: first, find the eigenpairs using the Sage Cell below (same as previous, but pre-loaded with a complex eigenvalue matrix).
+<figure>
     <caption>Finding symbolic eigenvectors with Python</caption>
 <sage xml:id="sage-sympy-eigs-complex" language="python">
 <input>
