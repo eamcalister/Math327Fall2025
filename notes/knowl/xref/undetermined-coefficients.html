@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h4 class="heading">
+<span class="type">Solution Method</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Method of Undetermined Coefficients.</span>
+</h4>
+<div class="para logical">
+<div class="para">To solve <a href="first-order-linear.html#first_non_hom" class="xref" data-knowl="./knowl/xref/first_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1">(1.1)</a>, proceed as follows:</div>
+<ol class="decimal" id="undetermined-coefficients-2-2">
+<li>
+<div class="para">Observe that <span class="process-math">\(u_h(t) = Ke^{\int h(t) dt}\text{,}\)</span> where <span class="process-math">\(K\)</span> is an arbitrary constant.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#undetermined-coefficients-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Guess a generic function in the same family as <span class="process-math">\(g(t)\)</span> for <span class="process-math">\(u_p(t)\text{.}\)</span> For instance,</div>
+<ul class="disc" id="undetermined-coefficients-2-2-2-1-3">
+<li>
+<div class="para">if <span class="process-math">\(g(t)\)</span> is linear, guess <span class="process-math">\(u_p(t) = mt+b\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#undetermined-coefficients-2-2-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">if <span class="process-math">\(g(t)\)</span> is quadratic, guess <span class="process-math">\(u_p(t) = at^2+bt+c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#undetermined-coefficients-2-2-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">if <span class="process-math">\(g(t)\)</span> is exponential, guess an exponential with the same growth rate,<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#undetermined-coefficients-2-2-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">etc.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#undetermined-coefficients-2-2-2-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#undetermined-coefficients-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">Plug your guess function into <a href="first-order-linear.html#first_non_hom" class="xref" data-knowl="./knowl/xref/first_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1">(1.1)</a> and solve the resulting system of equations for any unknow parameters.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#undetermined-coefficients-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">Form the general solution as indicated by the theorem and apply any initial conditions to solve for <span class="process-math">\(K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#undetermined-coefficients-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution Method 1.6: The Method of Undetermined Coefficients"><a href="#undetermined-coefficients" title="Copy heading and permalink for Solution Method 1.6: The Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Solution Method 1.6: The Method of Undetermined Coefficients">🔗</a></div></article><span class="incontext"><a class="internal" href="first-order-linear.html#undetermined-coefficients">in-context</a></span>
+</body>
+</html>

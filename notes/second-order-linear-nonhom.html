@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Solution Technique 5: Linear Homogeneous Second-Order ODEs</title>
+<title>Solution Technique 6: Non-homogeneous Second Order ODEs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -153,7 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="linear-repeated.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="second-order-linear-nonhom.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="SecondOrderHomogeneous.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -190,255 +190,120 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="linear-repeated.html" class="internal"><span class="codenumber">6</span> <span class="title">Solution Technique 4c: Linear Systems with Repeated Eigenvalues</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear-repeated.html#eigenvalue-method-three" class="internal"><span class="title">The Eigenvalue/Eigenvector Method</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section contains-active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="SecondOrderHomogeneous.html" class="internal"><span class="codenumber">7</span> <span class="title">Solution Technique 5: Linear Homogeneous Second-Order ODEs</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SecondOrderHomogeneous.html#overdamped" class="internal"><span class="title">Case I: <span class="process-math">\(b^2-4ac &gt; 0\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SecondOrderHomogeneous.html#underdamped" class="internal"><span class="title">Case II: <span class="process-math">\(b^2-4ac &lt; 0\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SecondOrderHomogeneous.html#crit-damped" class="internal"><span class="title">Case III: <span class="process-math">\(b^2-4ac = 0\)</span></span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="second-order-linear-nonhom.html" class="internal"><span class="codenumber">8</span> <span class="title">Solution Technique 6: Non-homogeneous Second Order ODEs</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="second-order-linear-nonhom.html#2ndundetermined-coefficients" class="internal"><span class="title">The Method of Undetermined Coefficients</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="second-order-linear-nonhom.html#2ndundetermined-coefficients" class="internal"><span class="title">The Method of Undetermined Coefficients</span></a></div></li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SecondOrderHomogeneous"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7</span><span class="space"> </span><span class="title">Solution Technique 5: Linear Homogeneous Second-Order ODEs</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="second-order-linear-nonhom"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8</span><span class="space"> </span><span class="title">Solution Technique 6: Non-homogeneous Second Order ODEs</span>
 </h2>
-<div class="para" id="SecondOrderHomogeneous-2">This note tells us how to solve constant-coefficient linear second-order homogeneous ODEs.<div class="autopermalink" data-description="Paragraph"><a href="#SecondOrderHomogeneous-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="second-order-linear-nonhom-2">
+<div class="para">This note gives a useful technique for solving second-order constant-coefficient ODEs that are not homogeneous. That is, we wish to solve</div>
+<div class="displaymath process-math" id="second_non_hom">
+\begin{equation}
+ax'' + bx' + cx = F(t),\tag{8.1}
+\end{equation}
 </div>
-<div class="para logical" id="equation1">
-<div class="para">Suppose we wish to solve</div>
-<div class="displaymath process-math">
-\begin{equation*}
-ax'' + bx' + cx = 0.
-\end{equation*}
+<div class="para">where the function <span class="process-math">\(F(t)\)</span> is nonzero. Often, <span class="process-math">\(F(t)\)</span> corresponds to some external force (not from the spring or damper).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#second-order-linear-nonhom-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#equation1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="SecondOrderHomogeneous-4">
-<div class="para">We know how to rewrite this equation as a system of two first-order equations (called the <dfn class="terminology">companion system</dfn> to the second-order equation) by making the substitution <span class="process-math">\(x_1 = x\)</span> and <span class="process-math">\(x_2 = x'\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left\lbrack
-\begin{array}{r}
-x_1'(t) \\
-x_2'(t)
-\end{array}
-\right\rbrack
-= 
-\left\lbrack
-\begin{array}{rr}
-0 &amp; 1 \\
--\frac{c}{a} &amp; -\frac{b}{a}
-\end{array}
-\right\rbrack
-\left\lbrack
-\begin{array}{r}
-x_1(t) \\
-x_2(t)
-\end{array}
-\right\rbrack.
-\end{equation*}
-</div>
-<div class="para">We solve this system using the eigenvalue method. To do so, we solve</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left\lbrack
-\begin{array}{rr}
-0 &amp; 1 \\
--\frac{c}{a} &amp; -\frac{b}{a}
-\end{array}
-\right\rbrack
-\left\lbrack
-\begin{array}{r}
-u \\
-v
-\end{array}
-\right\rbrack 
-= 
-\lambda\left\lbrack
-\begin{array}{r}
-u \\
-v
-\end{array}
-\right\rbrack.   
-\end{equation*}
-</div>
-<div class="para">Observe that the first entry of the matrix product implies <span class="process-math">\(v = \lambda u\text{,}\)</span> hence <span class="process-math">\(\vec{\mathbf{v}} = \left\lbrack
-\begin{array}{r}
-1 \\
-\lambda
-\end{array}
-\right\rbrack\)</span> will be an eigenvector for any eigenvalue of this matrix. Now plugging <span class="process-math">\(u = 1\)</span> and <span class="process-math">\(\lambda = v\)</span> in the second equation, we get</div>
-<div class="displaymath process-math">
-\begin{equation*}
--\frac{c}{a} - \frac{b}{a}\lambda = \lambda^2.
-\end{equation*}
-</div>
-<div class="para">This is equivalent to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a\lambda^2 + b\lambda +c = 0,
-\end{equation*}
-</div>
-<div class="para">which we may solve using the quadratic formula. This yields the following three possibilities:</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#SecondOrderHomogeneous-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<section class="subsection" id="overdamped"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Case I: <span class="process-math">\(b^2-4ac &gt; 0\)</span></span>
+<a href="first-order-linear.html#u_p-u_h-method" class="xref" data-knowl="./knowl/xref/u_p-u_h-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Solution Method 1.4: The u_p + u_h Method">Solution Method 1.4</a><a href="first-order-linear.html#undetermined-coefficients" class="xref" data-knowl="./knowl/xref/undetermined-coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Solution Method 1.6: The Method of Undetermined Coefficients">Solution Method 1.6</a><section class="subsection" id="2ndundetermined-coefficients"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">The Method of Undetermined Coefficients</span>
 </h3>
-<div class="para logical" id="overdamped-2">
-<div class="para">If <span class="process-math">\(b^2 - 4ac &gt; 0\text{,}\)</span> there are two distinct real eigenvalues <span class="process-math">\(\lambda_1\text{,}\)</span> <span class="process-math">\(\lambda_2\)</span> with corresponding eigenvectors <span class="process-math">\(\vec{\bf x}_1\)</span> and <span class="process-math">\(\vec{\bf x}_2\text{.}\)</span>  Since the solution we are looking for is <span class="process-math">\(x_1 = x\)</span> (and <span class="process-math">\(x_2\)</span> is simply <span class="process-math">\(x_1'\)</span>), we write the general solution as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
+<article class="theorem theorem-like" id="second-order-linear-solutions"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Form of Solutions to Second-Order Linear ODEs.</span>
+</h4>
+<div class="para logical" id="second-order-linear-solutions-2-1">
+<div class="para">The general solution to the ODE <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second_non_hom.html ./knowl/xref/second_non_hom.html">
 \begin{equation*}
-\left\lbrack
-\begin{array}{r}
-x_1(t) \\
-x_2(t)
-\end{array}
-\right\rbrack
-= 
-c_1 e^{\lambda_1 t}       \left\lbrack
-\begin{array}{r}
-1 \\
-\lambda_1
-\end{array}
-\right\rbrack
-+
-c_2 e^{\lambda_2 t}       \left\lbrack
-\begin{array}{r}
-1 \\
-\lambda_2
-\end{array}
-\right\rbrack
+x(t) = x_h(t) + x_p(t)
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(x(t)\)</span> is the function we want, the general solution of  <a href="SecondOrderHomogeneous.html#equation1" class="xref" data-knowl="./knowl/xref/equation1.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">the original equation </a> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-x(t) = c_1e^{\lambda_1 t} + c_2e^{\lambda_2 t}. 
-\end{equation*}
+<div class="para">where <span class="process-math">\(x_h(t)\)</span> is the general solution to the homogeneous first-order ODE</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/second_non_hom.html ./knowl/xref/second_non_hom.html" id="2ndhom_aux">
+\begin{equation}
+ax'' + bx' + cx = 0\tag{8.2}
+\end{equation}
 </div>
-<div class="para">(The system solution is still useful for solving initial value problems.)</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#overdamped-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">and <span class="process-math">\(x_p(t)\)</span> is any particular solution to <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a> you may be able to find.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#second-order-linear-solutions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Case I: b^2-4ac &gt; 0"><a href="#overdamped" title="Copy heading and permalink for Subsection: Case I: b^2-4ac &gt; 0" aria-label="Copy heading and permalink for Subsection: Case I: b^2-4ac &gt; 0">🔗</a></div></section><section class="subsection" id="underdamped"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Case II: <span class="process-math">\(b^2-4ac &lt; 0\)</span></span>
-</h3>
-<div class="para logical" id="underdamped-2">
-<div class="para">If <span class="process-math">\(b^2 - 4ac &lt; 0\text{,}\)</span> there are two distinct complex eigenvalues.  Remember that we can build the general solution out of only one eigenvalue, say <span class="process-math">\(\lambda_1 = \alpha+\beta i\text{,}\)</span> and its corresponding eigenvector.  Since we only care about the first component <span class="process-math">\(x_1 = x\text{,}\)</span> we can write</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-e^{(\alpha+\beta i)t}       \left\lbrack
-\begin{array}{c}
-1 \\
-\alpha + \beta i
-\end{array}
-\right\rbrack   
-=
-e^{\alpha t} \left(
-\left\lbrack
-\begin{array}{c}
-\cos(\beta t) \\
-\alpha\cos(\beta t) -\beta\sin(\beta t)
-\end{array}
-\right\rbrack
-+ i
-\left\lbrack
-\begin{array}{c}
-\sin(\beta t) \\
-\beta\cos(\beta t) + \alpha\sin(\beta t)
-\end{array}
-\right\rbrack
-\right).
-\end{equation*}
+<div class="autopermalink" data-description="Theorem 8.1: Form of Solutions to Second-Order Linear ODEs"><a href="#second-order-linear-solutions" title="Copy heading and permalink for Theorem 8.1: Form of Solutions to Second-Order Linear ODEs" aria-label="Copy heading and permalink for Theorem 8.1: Form of Solutions to Second-Order Linear ODEs">🔗</a></div></article><details id="2ndundetermined-coefficients-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="2ndundetermined-coefficients-3-1">Let <span class="process-math">\(u(t)\)</span> be an arbitrary solution to <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a>. Consider the difference <span class="process-math">\(x(t) - x_p(t)\text{.}\)</span> Observe that this is a solution to <a href="second-order-linear-nonhom.html#2ndhom_aux" class="xref" data-knowl="./knowl/xref/2ndhom_aux.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2">(8.2)</a>. This means <span class="process-math">\(x(t)\)</span> has the form indicated by the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#2ndundetermined-coefficients-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The real-valued solution to the system is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-\left\lbrack
-\begin{array}{r}
-x_1(t) \\
-x_2(t)
-\end{array}
-\right\rbrack
-=
-c_1 e^{\alpha t}
-\left\lbrack
-\begin{array}{c}
-\cos(\beta t) \\
-\alpha\cos(\beta t) -\beta\sin(\beta t)
-\end{array}
-\right\rbrack
-+
-c_1 e^{\alpha t}       
-\left\lbrack
-\begin{array}{c}
-\sin(\beta t) \\
-\beta\cos(\beta t) + \alpha\sin(\beta t)
-\end{array}
-\right\rbrack.
-\end{equation*}
+<div class="autopermalink" data-description="Proof 1"><a href="#2ndundetermined-coefficients-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><article class="algorithm theorem-like" id="undetermined-coefficients2"><h4 class="heading">
+<span class="type">Solution Method</span><span class="space"> </span><span class="codenumber">8.2</span><span class="period">.</span><span class="space"> </span><span class="title">The Moethod of Undetermined Coefficients.</span>
+</h4>
+<div class="para logical" id="undetermined-coefficients2-2">
+<div class="para">To solve <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a>, proceed as follows:</div>
+<ol class="decimal" id="undetermined-coefficients2-2-2">
+<li id="undetermined-coefficients2-2-2-1">
+<div class="para" id="undetermined-coefficients2-2-2-1-1">Solve <a href="second-order-linear-nonhom.html#2ndhom_aux" class="xref" data-knowl="./knowl/xref/2ndhom_aux.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2">(8.2)</a> using previously learned technique. Call the general solution to this equation <span class="process-math">\(x_h(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Thus, we obtain the general solution of  <a href="SecondOrderHomogeneous.html#equation1" class="xref" data-knowl="./knowl/xref/equation1.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">the original equation </a>:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-x(t) = e^{\alpha t} [ c_1\cos(\beta t) + c_2\sin(\beta t)].
-\end{equation*}
+<div class="autopermalink" data-description="Item 1"><a href="#undetermined-coefficients2-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="undetermined-coefficients2-2-2-2">
+<div class="para" id="undetermined-coefficients2-2-2-2-1">Guess a solution <span class="process-math">\(x_p(t)\)</span> to <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a> of the same general form as <span class="process-math">\(F(t)\)</span> according to <a href="second-order-linear-nonhom.html#guess-table" class="xref" data-knowl="./knowl/xref/guess-table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 8.3: Good Guesses for Undetermined Coefficients">Table 8.3</a>. If <span class="process-math">\(F(t)\)</span> is a linear combination of functions with forms in the table, make a guess for each term in the linear combination and combine at the end. If your initial guess for <span class="process-math">\(x_p(t)\)</span> is a solution to <a href="second-order-linear-nonhom.html#2ndhom_aux" class="xref" data-knowl="./knowl/xref/2ndhom_aux.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2">(8.2)</a>, multiply by a power of <span class="process-math">\(t\)</span> so that it is no longer a solution to <a href="second-order-linear-nonhom.html#2ndhom_aux" class="xref" data-knowl="./knowl/xref/2ndhom_aux.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2">(8.2)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#underdamped-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#undetermined-coefficients2-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="undetermined-coefficients2-2-2-3">
+<div class="para" id="undetermined-coefficients2-2-2-3-1">Solve for unknown coefficients by substituting <span class="process-math">\(x_p(t)\)</span> into <a href="second-order-linear-nonhom.html#second_non_hom" class="xref" data-knowl="./knowl/xref/second_non_hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1">(8.1)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Case II: b^2-4ac &lt; 0"><a href="#underdamped" title="Copy heading and permalink for Subsection: Case II: b^2-4ac &lt; 0" aria-label="Copy heading and permalink for Subsection: Case II: b^2-4ac &lt; 0">🔗</a></div></section><section class="subsection" id="crit-damped"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Case III: <span class="process-math">\(b^2-4ac = 0\)</span></span>
-</h3>
-<div class="para logical" id="crit-damped-2">
-<div class="para">If <span class="process-math">\(b^2 - 4ac = 0\text{,}\)</span> we have one real (repeated) eigenvalue <span class="process-math">\(\lambda = -\frac{b}{2a}\text{.}\)</span>  We can still build a fundamental set of solutions and get the general solution of the form:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-\left\lbrack
-\begin{array}{r}
-x_1(t) \\
-x_2(t)
-\end{array}
-\right\rbrack
-= 
-c_1 e^{-\frac{b}{2a} t}       \left\lbrack
-\begin{array}{r}
-1 \\
--\frac{b}{2a}
-\end{array}
-\right\rbrack
-+
-c_2 \left( t e^{-\frac{b}{2a} t}       \left\lbrack
-\begin{array}{r}
-1 \\
--\frac{b}{2a}
-\end{array}
-\right\rbrack
-+
-e^{-\frac{b}{2a} t}       \left\lbrack
-\begin{array}{r}
-0 \\
-1
-\end{array}
-\right\rbrack
-\right)  
-\end{equation*}
+<div class="autopermalink" data-description="Item 3"><a href="#undetermined-coefficients2-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="undetermined-coefficients2-2-2-4">
+<div class="para" id="undetermined-coefficients2-2-2-4-1">Form the general solution and solve for coefficients using initial conditions.<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients2-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Thus, the general solution of  <a href="SecondOrderHomogeneous.html#equation1" class="xref" data-knowl="./knowl/xref/equation1.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">the original equation </a> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation1.html">
-\begin{equation*}
-x(t) = c_1e^{-\frac{b}{2a} t} + c_2t e^{-\frac{b}{2a} t}.
-\end{equation*}
+<div class="autopermalink" data-description="Item 4"><a href="#undetermined-coefficients2-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#undetermined-coefficients2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#crit-damped-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Subsection: Case III: b^2-4ac = 0"><a href="#crit-damped" title="Copy heading and permalink for Subsection: Case III: b^2-4ac = 0" aria-label="Copy heading and permalink for Subsection: Case III: b^2-4ac = 0">🔗</a></div></section><div class="autopermalink" data-description="Section 7: Solution Technique 5: Linear Homogeneous Second-Order ODEs"><a href="#SecondOrderHomogeneous" title="Copy heading and permalink for Section 7: Solution Technique 5: Linear Homogeneous Second-Order ODEs" aria-label="Copy heading and permalink for Section 7: Solution Technique 5: Linear Homogeneous Second-Order ODEs">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Solution Method 8.2: The Moethod of Undetermined Coefficients"><a href="#undetermined-coefficients2" title="Copy heading and permalink for Solution Method 8.2: The Moethod of Undetermined Coefficients" aria-label="Copy heading and permalink for Solution Method 8.2: The Moethod of Undetermined Coefficients">🔗</a></div></article><figure class="table table-like" id="guess-table"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.3<span class="period">.</span></span><span class="space"> </span>Good Guesses for Undetermined Coefficients<div class="autopermalink" data-description="Table 8.3: Good Guesses for Undetermined Coefficients"><a href="#guess-table" title="Copy heading and permalink for Table 8.3: Good Guesses for Undetermined Coefficients" aria-label="Copy heading and permalink for Table 8.3: Good Guesses for Undetermined Coefficients">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"><span class="process-math">\(F(t)\)</span></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Guess for <span class="process-math">\(x_p(t)\)</span>
+</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Polynomial of degree <span class="process-math">\(n\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Polynomial of degree <span class="process-math">\(n\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(ae^{kt}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ae^{kt}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(a\cos(\omega t)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A\cos(\omega t) + B\sin(\omega t)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(a\sin(\omega t)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A\cos(\omega t) + B\sin(\omega t)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(ae^{kt}\cos(\omega t)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(Ae^{kt}\cos(\omega t) + Be^{kt}\sin(\omega t)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Subsection: The Method of Undetermined Coefficients"><a href="#2ndundetermined-coefficients" title="Copy heading and permalink for Subsection: The Method of Undetermined Coefficients" aria-label="Copy heading and permalink for Subsection: The Method of Undetermined Coefficients">🔗</a></div></section><div class="autopermalink" data-description="Section 8: Solution Technique 6: Non-homogeneous Second Order ODEs"><a href="#second-order-linear-nonhom" title="Copy heading and permalink for Section 8: Solution Technique 6: Non-homogeneous Second Order ODEs" aria-label="Copy heading and permalink for Section 8: Solution Technique 6: Non-homogeneous Second Order ODEs">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="linear-repeated.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="second-order-linear-nonhom.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="SecondOrderHomogeneous.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

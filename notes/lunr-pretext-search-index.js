@@ -368,6 +368,51 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "",
   "body": "companion system "
+},
+{
+  "id": "second-order-linear-nonhom",
+  "level": "1",
+  "url": "second-order-linear-nonhom.html",
+  "type": "Section",
+  "number": "8",
+  "title": "Solution Technique 6: Non-homogeneous Second Order ODEs",
+  "body": " Solution Technique 6: Non-homogeneous Second Order ODEs  This note gives a useful technique for solving second-order constant-coefficient ODEs that are not homogeneous. That is, we wish to solve where the function is nonzero. Often, corresponds to some external force (not from the spring or damper). It turns out the the technique is nothing more than the and\/or , but for second-order equations.  The Method of Undetermined Coefficients   Form of Solutions to Second-Order Linear ODEs   The general solution to the ODE is where is the general solution to the homogeneous first-order ODE and is any particular solution to you may be able to find.     Let be an arbitrary solution to . Consider the difference . Observe that this is a solution to . This means has the form indicated by the theorem.    The Moethod of Undetermined Coefficients  To solve , proceed as follows:   Solve using previously learned technique. Call the general solution to this equation .    Guess a solution to of the same general form as according to . If is a linear combination of functions with forms in the table, make a guess for each term in the linear combination and combine at the end. If your initial guess for is a solution to , multiply by a power of so that it is no longer a solution to .    Solve for unknown coefficients by substituting into .    Form the general solution and solve for coefficients using initial conditions.       Good Guesses for Undetermined Coefficients     Guess for    Polynomial of degree  Polynomial of degree                          "
+},
+{
+  "id": "second-order-linear-solutions",
+  "level": "2",
+  "url": "second-order-linear-nonhom.html#second-order-linear-solutions",
+  "type": "Theorem",
+  "number": "8.1",
+  "title": "Form of Solutions to Second-Order Linear ODEs.",
+  "body": " Form of Solutions to Second-Order Linear ODEs   The general solution to the ODE is where is the general solution to the homogeneous first-order ODE and is any particular solution to you may be able to find.   "
+},
+{
+  "id": "2ndundetermined-coefficients-3",
+  "level": "2",
+  "url": "second-order-linear-nonhom.html#2ndundetermined-coefficients-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let be an arbitrary solution to . Consider the difference . Observe that this is a solution to . This means has the form indicated by the theorem.  "
+},
+{
+  "id": "undetermined-coefficients2",
+  "level": "2",
+  "url": "second-order-linear-nonhom.html#undetermined-coefficients2",
+  "type": "Solution Method",
+  "number": "8.2",
+  "title": "The Moethod of Undetermined Coefficients.",
+  "body": " The Moethod of Undetermined Coefficients  To solve , proceed as follows:   Solve using previously learned technique. Call the general solution to this equation .    Guess a solution to of the same general form as according to . If is a linear combination of functions with forms in the table, make a guess for each term in the linear combination and combine at the end. If your initial guess for is a solution to , multiply by a power of so that it is no longer a solution to .    Solve for unknown coefficients by substituting into .    Form the general solution and solve for coefficients using initial conditions.     "
+},
+{
+  "id": "guess-table",
+  "level": "2",
+  "url": "second-order-linear-nonhom.html#guess-table",
+  "type": "Table",
+  "number": "8.3",
+  "title": "Good Guesses for Undetermined Coefficients",
+  "body": " Good Guesses for Undetermined Coefficients     Guess for    Polynomial of degree  Polynomial of degree                        "
 }
 ]
 
