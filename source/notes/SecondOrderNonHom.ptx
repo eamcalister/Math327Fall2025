@@ -34,7 +34,7 @@
         </theorem>
         <proof>
             <p>
-                Let <m>u(t)</m> be an arbitrary solution to <xref ref="second_non_hom"/>. Consider the difference <m>x(t) - x_p(t)</m>. Observe that this is a solution to <xref ref="2ndhom_aux"/>. This means <m>x(t)</m> has the form indicated by the theorem.
+                Let <m>x(t)</m> be an arbitrary solution to <xref ref="second_non_hom"/>. Consider the difference <m>x(t) - x_p(t)</m>. Observe that this is a solution to <xref ref="2ndhom_aux"/>. This means <m>x(t)</m> has the form indicated by the theorem.
             </p>
         </proof>
         <algorithm xml:id="undetermined-coefficients2">
