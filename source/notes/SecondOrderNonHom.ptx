@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="second-order-linear-nonhom">
+        <title>Solution Technique 6: Non-homogeneous Second Order ODEs</title>
+        <p>
+            This note gives a useful technique for solving second-order constant-coefficient ODEs that are not homogeneous. That is, we wish to solve
+            <men xml:id="second_non_hom" >
+                ax'' + bx' + cx = F(t),
+            </men>
+            where the function <m>F(t)</m> is nonzero. Often, <m>F(t)</m> corresponds to some external force (not from the spring or damper).
+        </p>
+    It turns out the the technique is nothing more than the <xref ref="u_p-u_h-method" /> and/or <xref ref="undetermined-coefficients"/>, but for second-order equations.
+
+        <subsection xml:id="2ndundetermined-coefficients">
+          <title>The Method of Undetermined Coefficients</title>
+
+        <theorem xml:id="second-order-linear-solutions">
+            <title>Form of Solutions to Second-Order Linear ODEs</title>
+            <statement>
+                <p>
+                    The general solution to the ODE <xref ref="second_non_hom"/> is
+                <me>
+                    x(t) = x_h(t) + x_p(t)
+                </me>
+                where <m>x_h(t)</m> is the general solution to the homogeneous first-order ODE
+                <men xml:id="2ndhom_aux" >
+                    ax'' + bx' + cx = 0
+                </men>
+                and <m>x_p(t)</m> is any particular solution to <xref ref="second_non_hom"/> you may be able to find.                                
+                </p>
+            </statement>
+        </theorem>
+        <proof>
+            <p>
+                Let <m>u(t)</m> be an arbitrary solution to <xref ref="second_non_hom"/>. Consider the difference <m>x(t) - x_p(t)</m>. Observe that this is a solution to <xref ref="2ndhom_aux"/>. This means <m>x(t)</m> has the form indicated by the theorem.
+            </p>
+        </proof>
+        <algorithm xml:id="undetermined-coefficients2">
+            <title>The Moethod of Undetermined Coefficients</title>
+            <p>
+                To solve <xref ref="second_non_hom"/>, proceed as follows:
+            <ol>
+                <li>
+                    <p>
+                        Solve <xref ref="2ndhom_aux"/> using previously learned technique. Call the general solution to this equation <m>x_h(t)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Guess a solution <m>x_p(t)</m> to <xref ref="second_non_hom"/> of the same general form as <m>F(t)</m> according to <xref ref="guess-table"/>. If <m>F(t)</m> is a linear combination of functions with forms in the table, make a guess for each term in the linear combination and combine at the end. If your initial guess for <m>x_p(t)</m> is a solution to <xref ref="2ndhom_aux"/>, multiply by a power of <m>t</m> so that it is no longer a solution to <xref ref="2ndhom_aux"/>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Solve for unknown coefficients by substituting <m>x_p(t)</m> into <xref ref="second_non_hom"/>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Form the general solution and solve for coefficients using initial conditions.
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </algorithm>
+
+        <table xml:id="guess-table">
+            <title>Good Guesses for Undetermined Coefficients</title>
+            <tabular>
+                <row header="yes">
+                    <cell><m>F(t)</m></cell> <cell>Guess for <m>x_p(t)</m></cell>
+                </row>
+                <row>
+                    <cell>Polynomial of degree <m>n</m></cell> <cell>Polynomial of degree <m>n</m></cell>
+                </row>
+                <row>
+                    <cell><m>ae^{kt}</m></cell> <cell><m>Ae^{kt}</m></cell>
+                </row>
+                <row>
+                    <cell><m>a\cos(\omega t)</m></cell> <cell><m>A\cos(\omega t) + B\sin(\omega t)</m></cell>
+                </row>
+                <row>
+                    <cell><m>a\sin(\omega t)</m></cell> <cell><m>A\cos(\omega t) + B\sin(\omega t)</m></cell>
+                </row>
+                <row>
+                    <cell><m>ae^{kt}\cos(\omega t)</m></cell> <cell><m>Ae^{kt}\cos(\omega t) + Be^{kt}\sin(\omega t)</m></cell>
+                </row>
+                <row>
+                    <cell><m>\vdots</m></cell> <cell><m>\vdots</m></cell>
+                </row>
+            </tabular>
+        </table>
+
+
+
+        
+            
+        </subsection>
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

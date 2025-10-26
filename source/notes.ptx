@@ -17,6 +17,9 @@
     <xi:include href="./notes/SystemsComplex.ptx" />
     <xi:include href="./notes/SystemsRepeated.ptx" />
     <xi:include href="./notes/SecondOrdHom.ptx" />
+    <xi:include href="./notes/SecondOrderNonHom.ptx" />
+    
+    
 
 
     <!-- Add more xi:include files here to include them in the main course -->
