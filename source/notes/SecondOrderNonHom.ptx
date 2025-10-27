@@ -11,8 +11,9 @@
             </men>
             where the function <m>F(t)</m> is nonzero. Often, <m>F(t)</m> corresponds to some external force (not from the spring or damper).
         </p>
+    <p>
     It turns out the the technique is nothing more than the <xref ref="u_p-u_h-method" /> and/or <xref ref="undetermined-coefficients"/>, but for second-order equations.
-
+    </p>
         <subsection xml:id="2ndundetermined-coefficients">
           <title>The Method of Undetermined Coefficients</title>
 
@@ -38,7 +39,7 @@
             </p>
         </proof>
         <algorithm xml:id="undetermined-coefficients2">
-            <title>The Moethod of Undetermined Coefficients</title>
+            <title>The Method of Undetermined Coefficients</title>
             <p>
                 To solve <xref ref="second_non_hom"/>, proceed as follows:
             <ol>
