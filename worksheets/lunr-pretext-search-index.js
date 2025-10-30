@@ -10,36 +10,36 @@ var ptx_lunr_docs = [
   "body": "  Erich McAlister Mathematics Department Fort Lewis College       "
 },
 {
-  "id": "Activity-title",
+  "id": "Insightmaker-Intro",
   "level": "1",
-  "url": "Activity-title.html",
+  "url": "Insightmaker-Intro.html",
   "type": "Worksheet",
   "number": "",
   "title": "Modeling Activity 1 - Introduction to Insightmaker",
   "body": " Modeling Activity 1 - Introduction to Insightmaker    This activity is to be done with a partner and is due Tuesday, September 2 on Canvas. Please make sure your final write-up is in ``final draft'' form. If you haven't already done this, go to and create an account. We will use this site (and other software) throughout the semester. You may also want to go to prior to class to help you figure out what is happening.      (The Mystery Insight) Go to and clone this Insight.     (2 points) When you click Simulate, what function is graphed?      (3 points) Change the initial value on the What am I? stock to something other than zero. Now what function is graphed when you simulate?      (3 points) Now click on the inflow = f flow into\/out of the stock. Based on the formula for this flow, what is the stock in relation to the flow? Tell me why this makes sense in terms of Calculus, and ``prove'' your answer by changing the flow function and showing the resulting simulation graph.      (2 points) What is the Mystery Insight model, expressed as a differential equation?       (5 points) (Build Your Own, Simple version) Now we would like to create an Insight to model Malthusian growth, i.e. exponential growth of a population given by the differential equation. We're going to do this together. When you submit your work, include the Insightmaker file (with a name different from the one on problem 3).  Here are some steps we'll take:   Create a primitive Stock, and call it , or whatever you think sounds good. Assign units to this stock.    We want to create a model in which we can vary the parameter . To do this, create a primitive Variable called . For this, you can create a slider so that you don't have to manually type in values. Also, give a reasonable range of values with a reasonable step-size.    Create a flow off of you stock. In order to have the flow rate involve the parameter , you need a link from to the flow. Create that, then give the formula for the flow.   Now simulate and see if the graph you get is what you expect. If it isn't we'll figure out what's wrong.        Now create an Insight to for the fish population with harvesting given in section 1.3 of the text (the differential equation is equation 1.3.6 in html version). Your Insight should have three parameters , , and . It should have two flows, one inflow for reproduction (involving ) and one outflow to account for resource limitations and harvesting (involving and ). Again, include the Insightmaker file for this exercise. To receive full credit all primitives should have units.    Sense making tip: Do a little algebra to get the differential equation to have isolated parts with obvious 's and 's and use in arrows for 's and out arrows for 's. Also, to receive full credit, your Insight must include units for all stocks, flows, and variables.     (5 points) Let , , , and . Run the simulation. Does the solution curve make sense, given the context of the model (What are and supposed to represent?)? Also, does the graph you get from Insightmaker approximately agree with the solution given by equation 1.3.7 (in html version insider reading exercise 1.3.8) of the text (using the given parameters, graphed somewhere else, like Desmos)? Include screenshots of all your images in your submission and write sentences to explain.      (5 points) By varying values of (with the other parameters as above), how large can be before the fish population goes extinct eventually? Include screenshots in your write-up to support your claim.      "
 },
 {
-  "id": "Activity-title-3-1",
+  "id": "Insightmaker-Intro-3-1",
   "level": "2",
-  "url": "Activity-title.html#Activity-title-3-1",
+  "url": "Insightmaker-Intro.html#Insightmaker-Intro-3-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
   "body": "  (The Mystery Insight) Go to and clone this Insight.     (2 points) When you click Simulate, what function is graphed?      (3 points) Change the initial value on the What am I? stock to something other than zero. Now what function is graphed when you simulate?      (3 points) Now click on the inflow = f flow into\/out of the stock. Based on the formula for this flow, what is the stock in relation to the flow? Tell me why this makes sense in terms of Calculus, and ``prove'' your answer by changing the flow function and showing the resulting simulation graph.      (2 points) What is the Mystery Insight model, expressed as a differential equation?    "
 },
 {
-  "id": "Activity-title-3-2",
+  "id": "Insightmaker-Intro-3-2",
   "level": "2",
-  "url": "Activity-title.html#Activity-title-3-2",
+  "url": "Insightmaker-Intro.html#Insightmaker-Intro-3-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
   "body": "  (5 points) (Build Your Own, Simple version) Now we would like to create an Insight to model Malthusian growth, i.e. exponential growth of a population given by the differential equation. We're going to do this together. When you submit your work, include the Insightmaker file (with a name different from the one on problem 3).  Here are some steps we'll take:   Create a primitive Stock, and call it , or whatever you think sounds good. Assign units to this stock.    We want to create a model in which we can vary the parameter . To do this, create a primitive Variable called . For this, you can create a slider so that you don't have to manually type in values. Also, give a reasonable range of values with a reasonable step-size.    Create a flow off of you stock. In order to have the flow rate involve the parameter , you need a link from to the flow. Create that, then give the formula for the flow.   Now simulate and see if the graph you get is what you expect. If it isn't we'll figure out what's wrong.   "
 },
 {
-  "id": "Activity-title-4-1",
+  "id": "Insightmaker-Intro-4-1",
   "level": "2",
-  "url": "Activity-title.html#Activity-title-4-1",
+  "url": "Insightmaker-Intro.html#Insightmaker-Intro-4-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
@@ -107,6 +107,42 @@ var ptx_lunr_docs = [
   "number": "2",
   "title": "",
   "body": "  Aroldis Chapman's fastest recorded pitch was a 105.1 mph fastball on September 24, 2010, and its velocity was measured 50.5 ft from home plate. Nolan Ryan threw a pitch whose velocity was measured at 100.9 mph at a distance of 10 ft from home plate. Use your Insight and estimate(s) of to decide which of these two pitches was likely the fastest.   "
+},
+{
+  "id": "EddyFreddyTwo",
+  "level": "1",
+  "url": "EddyFreddyTwo.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Modeling Activity 5 - Eddy and Freddy Revisited (Further Mathematical Studies of Antisocial Cyclists)",
+  "body": " Modeling Activity 5 - Eddy and Freddy Revisited (Further Mathematical Studies of Antisocial Cyclists)  In this activity we will revistit our cycist friends, Eddy and Freddy. Now that we know some more differential equations, we will do the following:   Figure out precisely why Eddy and Freddy always settled down on an equilibrium velocity and why oscillations ceased if .    Use Insightmaker find the resonant frequency when Freddy forces an oscillation.     Be sure to answer every question and include any graphs you use to make your assertions.         Recall the Eddy and Freddy cycling scenario. Eddy was a jerk who always wanted to be meters ahead of Freddy, who just wanted to ride the same speed as Eddy. For this scenario we derived the system of ODEs: Here we are using and to represent the position and velocities of Freddy and and to represent the position and velocity of Eddy. The constants and are assumed to be positive.     (4 points) Let . Use the above system of differential equations to show that satisfies the second-order ODE       (3 points) Use second-order the ODE given above to explain why Eddy and Freddy always settled down to a constant velocity with Eddy exactly meters ahead of Freddy.      (3 points) Explain why if , oscillations in position and velocity occured in the original system.       After constant ridicule from his friends over his half-wheeling, Eddy got some therapy to counteract his hyper-competitive nature. Now he wants to ride side-by-side with Freddy. However, Freddy now chooses to apply an oscillatory force while he rides (using a hidden motor). Letting denote the distance between Eddy and Freddy, we now have a second order ODE where Freddy can modify .      (6 points) Develop an Insight for this differential equation with a slider for . Because this is a second-order equation, there should be two stocks. Assume that Eddy and Freddy are initially side-by-side and going the same velocity ( and ). Using the slider, get a roung estimate range of values of that maximize the amplitude of the steady-state oscillation. (You must turn in an Insightmaker file).      Introduce a new variable for the steady-state amplitude and give it the formula PastMax([x]) . By running the simulation with both and this new variable plotted, explain why this represents the amplitude of the steady-state for reasonable values of .      Use the optimizer to maximize the final value of variable from the last. Use a range of values for the upper and lower bounds in the optimizer from part (a). Your optimal value of should roughly coincide with the number found in equation 4.4.12 in section 4.4 of the course textbook.  (This value of maximizes the amplitude of oscillations in the distance between Eddy and Freddy. Freddy knows this agitates Eddy, so he finds this to be the optimal value of .)     "
+},
+{
+  "id": "EddyFreddyTwo-2",
+  "level": "2",
+  "url": "EddyFreddyTwo.html#EddyFreddyTwo-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "In this activity we will revistit our cycist friends, Eddy and Freddy. Now that we know some more differential equations, we will do the following:   Figure out precisely why Eddy and Freddy always settled down on an equilibrium velocity and why oscillations ceased if .    Use Insightmaker find the resonant frequency when Freddy forces an oscillation.    "
+},
+{
+  "id": "EddyFreddyTwo-5-1",
+  "level": "2",
+  "url": "EddyFreddyTwo.html#EddyFreddyTwo-5-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Recall the Eddy and Freddy cycling scenario. Eddy was a jerk who always wanted to be meters ahead of Freddy, who just wanted to ride the same speed as Eddy. For this scenario we derived the system of ODEs: Here we are using and to represent the position and velocities of Freddy and and to represent the position and velocity of Eddy. The constants and are assumed to be positive.     (4 points) Let . Use the above system of differential equations to show that satisfies the second-order ODE       (3 points) Use second-order the ODE given above to explain why Eddy and Freddy always settled down to a constant velocity with Eddy exactly meters ahead of Freddy.      (3 points) Explain why if , oscillations in position and velocity occured in the original system.    "
+},
+{
+  "id": "EddyFreddyTwo-5-2",
+  "level": "2",
+  "url": "EddyFreddyTwo.html#EddyFreddyTwo-5-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  After constant ridicule from his friends over his half-wheeling, Eddy got some therapy to counteract his hyper-competitive nature. Now he wants to ride side-by-side with Freddy. However, Freddy now chooses to apply an oscillatory force while he rides (using a hidden motor). Letting denote the distance between Eddy and Freddy, we now have a second order ODE where Freddy can modify .   "
 }
 ]
 
