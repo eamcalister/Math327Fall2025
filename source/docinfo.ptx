@@ -22,6 +22,9 @@
     \newcommand{\Z}{\mathbb Z}
     \newcommand{\Q}{\mathbb Q}
     \newcommand{\R}{\mathbb R}
+    \newcommand{\twomat}[4]{\left[\begin{array}{r r} {#1} &amp; {#2}\\ {#3} &amp; {#4} \end{array}\right]} 
+\newcommand{\twovec}[2]{\left[\begin{array}{r r} {#1} \\ {#2} \end{array}\right]} 
+\newcommand{\fourvec}[4]{\left[\begin{array}{r r} {#1} \\ {#2}\\{#3}\\{#4} \end{array}\right]} 
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- When creating a new activity, make a copy of this file with appropriate name -->
+        <worksheet margin="1in" bottom="1.25cm" xml:id="EddyFreddyTwo">
+            <title>Modeling Activity 5 - Eddy and Freddy Revisited (Further Mathematical Studies of Antisocial Cyclists)</title>
+            <objectives>
+                In this activity we will revistit our cycist friends, Eddy and Freddy. Now that we know some more differential equations, we will do the following:
+                <ul>
+                    <li>
+                        <p>
+                            Figure out precisely why Eddy and Freddy always settled down on an equilibrium velocity and why oscillations ceased if <m>k_2 &lt; 0.25</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Use Insightmaker find the resonant frequency when Freddy forces an oscillation.
+                        </p>
+                    </li>
+                </ul>
+            </objectives>
+            <p>
+                Be sure to answer every question and include any graphs you use to make your assertions.
+            </p>
+
+            <introduction>
+                <p>
+
+                </p>
+            </introduction>
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                        Recall the Eddy and Freddy cycling scenario. Eddy was a jerk who always wanted to be <m>0.5</m> meters ahead of Freddy, who just wanted to ride the same speed as Eddy. For this scenario we derived the system of ODEs:
+<me>
+\fourvec{x_1'}{x_2'}{v_1'}{v_2'} = \left[\begin{array}{r r r r} 0 &amp; 0 &amp; 1 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; -k_1 &amp; k_1\\ k_2 &amp; -k_2 &amp; 0 &amp; 0 \end{array}\right]\fourvec{x_1}{x_2}{v_1}{v_2} + \fourvec{0}{0}{0}{0.5k_2}.
+</me>
+
+Here we are using <m>x_1</m> and <m>v_1</m> to represent the position and velocities of Freddy and <m>x_2</m> and <m>v_2</m> to represent the position and velocity of Eddy. The constants <m>k_1</m> and <m>k_2</m> are assumed to be positive.
+                    </p>
+                </introduction>
+                <task>
+                    <statement>
+                        <p>
+                            (4 points) Let <m>x = x_2-x_1-0.5</m>. Use the above system of differential equations to show that <m>x</m> satisfies the second-order ODE 
+                            <me>
+                                x'' +k_2 x' + k_1x = 0.
+                            </me>
+                            
+                        </p>
+                    </statement>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            (3 points) Use second-order the ODE given above to explain why Eddy and Freddy always settled down to a constant velocity with Eddy exactly <m>0.5</m> meters ahead of Freddy.
+                        </p>
+                    </statement>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            (3 points) Explain why if <m>k_2 &gt; 1/4</m>, oscillations in position and velocity occured in the original system.
+                        </p>
+                    </statement>
+                </task>
+
+            </exercise>
+            <exercise>
+                <introduction>
+                    <p>
+                        After constant ridicule from his friends over his half-wheeling, Eddy got some therapy to counteract his hyper-competitive nature. Now he wants to ride side-by-side with Freddy. However, Freddy now chooses to apply an oscillatory force while he rides (using a hidden motor). Letting <m>x</m> denote the distance between Eddy and Freddy, we now have a second order ODE 
+                        <me>
+                            x'' + x' + k_2x = \cos(\omega t),
+                        </me>
+                        where Freddy can modify <m>\omega</m>.
+                    </p>
+                </introduction>
+            </exercise>
+        <task>
+            <statement>
+                <p>
+                    (6 points) Develop an Insight for this differential equation with a slider for <m>\omega</m>. Because this is a second-order equation, there should be two stocks. Assume that Eddy and Freddy are initially side-by-side and going the same velocity (<m>x(0) = 0</m> and <m>x'(0) = 0</m>). Using the slider, get a roung estimate range of values of <m>\omega</m> that maximize the amplitude of the steady-state oscillation. (You must turn in an Insightmaker file).     
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Introduce a new variable for the steady-state amplitude and give it the formula <c>PastMax([x])</c>. By running the simulation with both <m>x</m> and this new variable plotted, explain why this represents the amplitude of the steady-state for reasonable values of <m>\omega</m>.       
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Use the optimizer to maximize the final value of variable from the last. Use a range of values for the upper and lower bounds in the optimizer from part (a). Your optimal value of <m>\omega</m> should roughly coincide with the number <m>\omega_{res}</m> found in equation 4.4.12 in section 4.4 of the course textbook. 
+                </p>
+                <p>
+                    (This value of <m>\omega </m> maximizes the amplitude of oscillations in the distance between Eddy and Freddy. Freddy knows this agitates Eddy, so he finds this to be the optimal value of <m>\omega</m>.)       
+                </p>
+            </statement>
+        </task>
+        </page>
+
+
+        </worksheet>
