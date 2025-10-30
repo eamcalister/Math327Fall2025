@@ -71,7 +71,7 @@ Here we are using <m>x_1</m> and <m>v_1</m> to represent the position and veloci
                     <p>
                         After constant ridicule from his friends over his half-wheeling, Eddy got some therapy to counteract his hyper-competitive nature. Now he wants to ride side-by-side with Freddy. However, Freddy now chooses to apply an oscillatory force while he rides (using a hidden motor). Letting <m>x</m> denote the distance between Eddy and Freddy, we now have a second order ODE 
                         <me>
-                            x'' + x' + k_2x = \cos(\omega t),
+                            x'' + x' + 3x = \cos(\omega t),
                         </me>
                         where Freddy can modify <m>\omega</m>.
                     </p>
