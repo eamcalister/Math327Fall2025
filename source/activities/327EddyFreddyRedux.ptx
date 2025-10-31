@@ -43,7 +43,7 @@ Here we are using <m>x_1</m> and <m>v_1</m> to represent the position and veloci
                         <p>
                             (4 points) Let <m>x = x_2-x_1-0.5</m>. Use the above system of differential equations to show that <m>x</m> satisfies the second-order ODE 
                             <me>
-                                x'' +k_2 x' + k_1x = 0.
+                                x'' +k_1 x' + k_2x = 0.
                             </me>
                             
                         </p>
