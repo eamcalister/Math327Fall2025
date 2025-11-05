@@ -18,6 +18,7 @@
     <xi:include href="./notes/SystemsRepeated.ptx" />
     <xi:include href="./notes/SecondOrdHom.ptx" />
     <xi:include href="./notes/SecondOrderNonHom.ptx" />
+    <xi:include href="./notes/LaplaceSolving.ptx" />
     
     
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--pretext-->
+    <!--article xml:id="notes"-->
+        <section xml:id="LaplaceSolving">
+        <title>Solution Technique 7: Solving ODEs with the Laplace Transform</title>
+        <p>
+            This note tells us the basic method of solving linear constant-coefficient initial value problems using the Laplace transform. 
+        </p>
+    
+
+ <image>
+
+<prefigure label = "LaplaceDiagram" xmlns="https://prefigure.org">
+<diagram dimensions="(300, 300)" margins="5">
+  <coordinates bbox="(-5,-5,7,5)">
+    <definition>p1=(0,4)</definition>
+    <definition>p2=(3,4)</definition>
+    <definition>p3=(0,0)</definition>
+    <definition>p4=(3,0)</definition>
+
+    <line endpoints="(p1,p2)" endpoint-offsets="((5,0), (-5,0))" dash="8 8" arrows="1"/>
+    <label p="p1" clear-background="yes" alignment="west">ODE</label>
+    <label p="p2" clear-background="yes" alignment="east">Solution in <m>t</m></label>
+
+    <line endpoints="(p3,p4)" endpoint-offsets="((10,0), (-5,0))" arrows="1"/>
+    <label p="(1,0)" clear-background="yes" alignment="west">Alegbraic Equation</label>
+    <label p="p4" clear-background="yes" alignment="east">Solution in <m>s</m></label>
+    <line endpoints="(p1,p3)" endpoint-offsets="((-10,-10), (-10,10))" arrows="1"/>
+    <line endpoints="(p4,p2)" endpoint-offsets="((10,10), (10,-15))" arrows="1"/>
+    <label p="(-1,2)" clear-background="yes" alignment="west"><m>\mathscr{L}</m></label>
+    <label p="(4,2)" clear-background="yes" alignment="east"><m>\mathscr{L}^{-1}</m></label>
+    <label p="p2" clear-background="yes" alignment="east">Solution in <m>t</m></label>
+  </coordinates>
+</diagram>
+</prefigure>
+</image>  
+
+
+
+        </section>
+    <!--/article-->
+<!--/pretext-->

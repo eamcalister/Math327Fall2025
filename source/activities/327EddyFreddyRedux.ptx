@@ -52,7 +52,7 @@ Here we are using <m>x_1</m> and <m>v_1</m> to represent the position and veloci
                 <task>
                     <statement>
                         <p>
-                            (3 points) Use second-order the ODE given above to explain why Eddy and Freddy always settled down to a constant velocity with Eddy exactly <m>0.5</m> meters ahead of Freddy.
+                            (3 points) Use the second-order ODE given above to explain why Eddy and Freddy always settled down to a constant velocity with Eddy exactly <m>0.5</m> meters ahead of Freddy.
                         </p>
                     </statement>
                 </task>
