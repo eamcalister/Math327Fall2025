@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-python' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-python",
+  "linked": true,
+  "linkKey": "linked-python",
+  "autoeval": false,
+  "languages": [
+    "python"
+  ],
+  "evalButtonText": "Evaluate (Python)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<figure class="figure figure-like"><div id="sage-python-partial-fractions-2" class="ptx-sagecell sagecell-python"><script type="text/x-sage">from sympy import symbols, apart
+
+# Define the variables. Add more than just s if there are additional parameters, like k, w, etc..
+s = symbols('s')
+
+# Define the rational function
+F = 1/((s**2-1))
+
+# Perform partial fraction decomposition.
+partial_fractions = apart(F,s)
+
+print(partial_fractions)
+</script></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3<span class="period">.</span></span><span class="space"> </span>Partial Fractions with Python<div class="autopermalink" data-description="Figure 9.3"><a href="#sage-python-partial-fractions" title="Copy heading and permalink for Figure 9.3" aria-label="Copy heading and permalink for Figure 9.3">🔗</a></div></figcaption></figure><span class="incontext"><a class="internal" href="LaplaceSolving.html#sage-python-partial-fractions">in-context</a></span>
+</body>
+</html>

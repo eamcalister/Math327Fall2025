@@ -413,6 +413,42 @@ var ptx_lunr_docs = [
   "number": "8.3",
   "title": "Good Guesses for Undetermined Coefficients",
   "body": " Good Guesses for Undetermined Coefficients     Guess for    Polynomial of degree  Polynomial of degree                        "
+},
+{
+  "id": "LaplaceSolving",
+  "level": "1",
+  "url": "LaplaceSolving.html",
+  "type": "Section",
+  "number": "9",
+  "title": "Solution Technique 7: Solving ODEs with the Laplace Transform",
+  "body": " Solution Technique 7: Solving ODEs with the Laplace Transform  This note tells us the basic method of solving linear constant-coefficient initial value problems using the Laplace transform.  Solving a constant coefficient linear ODE using the Laplace transform and the inverse Laplace transform is best summarized with the following diagram.      p1=(0,4)  p2=(3,4)  p3=(0,0)  p4=(3,0)   ODE  Solution in t   Alegbraic Equation  Solution in s    \\mathscr{L}  \\mathscr{L}^{-1}  Solution in t  \"easy\"  \"easy\"  easy  hard      To elaborate on this diagram, we have the following:   Solving with the Laplace Transform  To solve linear constant-coefficient ODEs using the Laplace transform, proceed as follows:   Find the Laplace transform of both sides of the equation. Use the rule or its higher-order version, to get an equation involving and . You will likely need to use .    Solve the equation you just found explicitly for .    Find . You will need to reverse rules from and often you will use the partial fraction decomposition (see ). That's it, you're done.       A Short Table of Laplace Transforms        1.     2.     3.     4.     5.     6.     7.     8.     9.     10.     11.     12.       Partial Fractions with Python    Here are a few notes about . Each item we refer to below is defined in class.     denotes the Heaviside (a.k.a. unit) step function.     denotes the \"function\".     is the convolution of with .    "
+},
+{
+  "id": "Laplace-solving",
+  "level": "2",
+  "url": "LaplaceSolving.html#Laplace-solving",
+  "type": "Solution Method",
+  "number": "9.1",
+  "title": "Solving with the Laplace Transform.",
+  "body": " Solving with the Laplace Transform  To solve linear constant-coefficient ODEs using the Laplace transform, proceed as follows:   Find the Laplace transform of both sides of the equation. Use the rule or its higher-order version, to get an equation involving and . You will likely need to use .    Solve the equation you just found explicitly for .    Find . You will need to reverse rules from and often you will use the partial fraction decomposition (see ). That's it, you're done.     "
+},
+{
+  "id": "LaplaceTable",
+  "level": "2",
+  "url": "LaplaceSolving.html#LaplaceTable",
+  "type": "Table",
+  "number": "9.2",
+  "title": "A Short Table of Laplace Transforms",
+  "body": " A Short Table of Laplace Transforms        1.     2.     3.     4.     5.     6.     7.     8.     9.     10.     11.     12.     "
+},
+{
+  "id": "sage-python-partial-fractions",
+  "level": "2",
+  "url": "LaplaceSolving.html#sage-python-partial-fractions",
+  "type": "Figure",
+  "number": "9.3",
+  "title": "",
+  "body": " Partial Fractions with Python   "
 }
 ]
 
