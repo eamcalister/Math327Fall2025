@@ -117,14 +117,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.17';
+eBookConfig.runestone_version = '7.9.18';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3ea59cc2563cc8e9.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-python' an executable Sage cell
@@ -254,7 +254,7 @@ sagecell.makeSagecell({
 <div class="autopermalink" data-description="Item 2"><a href="#Laplace-solving-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="Laplace-solving-2-1-3">
-<div class="para" id="Laplace-solving-2-1-3-1">Find <span class="process-math">\(y(t) = \mathscr{L}^{-1}{Y}(t)\text{.}\)</span> You will need to reverse rules from <a href="LaplaceSolving.html#LaplaceTable" class="xref" data-knowl="./knowl/xref/LaplaceTable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 9.2: A Short Table of Laplace Transforms">Table 9.2</a> and often you will use the partial fraction decomposition (see <a href="LaplaceSolving.html#sage-python-partial-fractions" class="xref" data-knowl="./knowl/xref/sage-python-partial-fractions.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.3">Figure 9.3</a>). That’s it, you’re done.<div class="autopermalink" data-description="Paragraph"><a href="#Laplace-solving-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="Laplace-solving-2-1-3-1">Find <span class="process-math">\(y(t) = \mathscr{L}^{-1}\{Y\}(t)\text{.}\)</span> You will need to reverse rules from <a href="LaplaceSolving.html#LaplaceTable" class="xref" data-knowl="./knowl/xref/LaplaceTable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 9.2: A Short Table of Laplace Transforms">Table 9.2</a> and often you will use the partial fraction decomposition (see <a href="LaplaceSolving.html#sage-python-partial-fractions" class="xref" data-knowl="./knowl/xref/sage-python-partial-fractions.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.3">Figure 9.3</a>). That’s it, you’re done.<div class="autopermalink" data-description="Paragraph"><a href="#Laplace-solving-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 3"><a href="#Laplace-solving-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
@@ -269,32 +269,32 @@ sagecell.makeSagecell({
 <tr>
 <td class="l m b0 r0 l0 t0 lines">1. <span class="process-math">\(t^n\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{n!}{s^{n+1}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{n!}{s^{n+1}}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">2. <span class="process-math">\(e^{at}\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{s-a}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1}{s-a}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">3. <span class="process-math">\(\cos(\omega t)\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{s}{s^2 + \omega^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{s}{s^2 + \omega^2}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">4. <span class="process-math">\(\sin(\omega t)\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{\omega}{s^2 + \omega^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\omega}{s^2 + \omega^2}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">5. <span class="process-math">\(t\cos(\omega t)\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{s^2-\omega^2}{s^2 + \omega^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{s^2-\omega^2}{(s^2 + \omega^2)^2}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">6. <span class="process-math">\(t\sin(\omega t)\)</span>
 </td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2\omega s}{s^2 + \omega^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{2\omega s}{(s^2 + \omega^2)^2}\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">7. <span class="process-math">\(e^{at}f(t)\)</span>
