@@ -67,7 +67,7 @@
                 </li>
                 <li>
                   <p>
-                    Find <m>y(t) = \mathscr{L}^{-1}{Y}(t)</m>. You will need to reverse rules from <xref ref="LaplaceTable"/> and often you will use the partial fraction decomposition (see <xref ref="sage-python-partial-fractions"/>). That's it, you're done.
+                    Find <m>y(t) = \mathscr{L}^{-1}\{Y\}(t)</m>. You will need to reverse rules from <xref ref="LaplaceTable"/> and often you will use the partial fraction decomposition (see <xref ref="sage-python-partial-fractions"/>). That's it, you're done.
                   </p>
                 </li>
             </ol>
@@ -81,22 +81,22 @@
                     <cell><m>f(t)</m></cell> <cell><m>F(s) = \mathscr{L}\{f\}(s)</m></cell>
                 </row>
                 <row>
-                    <cell>1. <m>t^n</m></cell> <cell><m>\frac{n!}{s^{n+1}}</m></cell>
+                    <cell>1. <m>t^n</m></cell> <cell><m>\dfrac{n!}{s^{n+1}}</m></cell>
                 </row>
                 <row>
-                    <cell>2. <m>e^{at}</m></cell> <cell><m>\frac{1}{s-a}</m></cell>
+                    <cell>2. <m>e^{at}</m></cell> <cell><m>\dfrac{1}{s-a}</m></cell>
                 </row>
                 <row>
-                    <cell>3. <m>\cos(\omega t)</m></cell> <cell><m>\frac{s}{s^2 + \omega^2}</m></cell>
+                    <cell>3. <m>\cos(\omega t)</m></cell> <cell><m>\dfrac{s}{s^2 + \omega^2}</m></cell>
                 </row>
                 <row>
-                    <cell>4. <m>\sin(\omega t)</m></cell> <cell><m>\frac{\omega}{s^2 + \omega^2}</m></cell>
+                    <cell>4. <m>\sin(\omega t)</m></cell> <cell><m>\dfrac{\omega}{s^2 + \omega^2}</m></cell>
                 </row>
                 <row>
-                    <cell>5. <m>t\cos(\omega t)</m></cell> <cell><m>\frac{s^2-\omega^2}{s^2 + \omega^2}</m></cell>
+                    <cell>5. <m>t\cos(\omega t)</m></cell> <cell><m>\dfrac{s^2-\omega^2}{(s^2 + \omega^2)^2}</m></cell>
                 </row>
                 <row>
-                    <cell>6. <m>t\sin(\omega t)</m></cell> <cell><m>\frac{2\omega s}{s^2 + \omega^2}</m></cell>
+                    <cell>6. <m>t\sin(\omega t)</m></cell> <cell><m>\dfrac{2\omega s}{(s^2 + \omega^2)^2}</m></cell>
                 </row>
                 
                 <row>
