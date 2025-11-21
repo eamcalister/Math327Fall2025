@@ -143,6 +143,51 @@ var ptx_lunr_docs = [
   "number": "2",
   "title": "",
   "body": "  After constant ridicule from his friends over his half-wheeling, Eddy got some therapy to counteract his hyper-competitive nature. Now he wants to ride side-by-side with Freddy. However, Freddy now chooses to apply an oscillatory force while he rides (using a hidden motor). Letting denote the distance between Eddy and Freddy, we now have a second order ODE where Freddy can modify .   "
+},
+{
+  "id": "sec-section-name-8",
+  "level": "1",
+  "url": "sec-section-name-8.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Math 327 Input-Output and Parameter Estimation Problems",
+  "body": " Math 327 Input-Output and Parameter Estimation Problems     Estimate the parameters in a differential equation based on the response to a known input function.    Find the response of a system to a certain input given the impulse response.       Suppose we have a first-order IVP known to be of the form where is a function we can change. If the response of this system for the input ?      Suppose we have a second-order IVP known to be of the form where is a function we can change. The impulse response (i.e. ) of this system is .     Find the system transfer function for this system (i.e. the Laplace transform of the impulse response).      Use the system transfer function to find the response of the system if the input is . Give your answer both in terms of Heaviside functions and as a piecewise defined function.       A liter tank initially contains only pure water. At time zero a brine solution containing kg of salt per liter of water starts flowing in at a rate of liters per minute. A well-stirred mixture flows out at liters per minute. After seconds an unknown quantity, , of salt is accidentally dumped into the tank (it dissolves and mixes instantaneously). The concentration of the outflow is monitored and is given by after time (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank). How much salt was accidentally dumped into the tank? Hint: Set up and solve an IVP involving a function with the parameter , then match with the given concentration.    "
+},
+{
+  "id": "sec-section-name-8-2",
+  "level": "2",
+  "url": "sec-section-name-8.html#sec-section-name-8-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "   Estimate the parameters in a differential equation based on the response to a known input function.    Find the response of a system to a certain input given the impulse response.    "
+},
+{
+  "id": "sec-section-name-8-3",
+  "level": "2",
+  "url": "sec-section-name-8.html#sec-section-name-8-3",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Suppose we have a first-order IVP known to be of the form where is a function we can change. If the response of this system for the input ?   "
+},
+{
+  "id": "sec-section-name-8-4",
+  "level": "2",
+  "url": "sec-section-name-8.html#sec-section-name-8-4",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Suppose we have a second-order IVP known to be of the form where is a function we can change. The impulse response (i.e. ) of this system is .     Find the system transfer function for this system (i.e. the Laplace transform of the impulse response).      Use the system transfer function to find the response of the system if the input is . Give your answer both in terms of Heaviside functions and as a piecewise defined function.    "
+},
+{
+  "id": "sec-section-name-8-5",
+  "level": "2",
+  "url": "sec-section-name-8.html#sec-section-name-8-5",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  A liter tank initially contains only pure water. At time zero a brine solution containing kg of salt per liter of water starts flowing in at a rate of liters per minute. A well-stirred mixture flows out at liters per minute. After seconds an unknown quantity, , of salt is accidentally dumped into the tank (it dissolves and mixes instantaneously). The concentration of the outflow is monitored and is given by after time (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank). How much salt was accidentally dumped into the tank? Hint: Set up and solve an IVP involving a function with the parameter , then match with the given concentration.   "
 }
 ]
 
