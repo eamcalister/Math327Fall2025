@@ -1,0 +1,231 @@
+<!--uncomment <pretext> and <article> tags at the beginning and end for standalone pdf generation-->
+<!--pretext-->
+<!--article-->
+        <worksheet margin="1in" bottom="1.25cm">
+            <title>Poles of the Laplace Transform (plus some other problems)</title>
+
+                <objectives>
+    <ul>
+        <li>
+            <p>
+                Begin reviewing for the final by solving a bunch of IVPs without the Laplace transform.
+            </p>
+        </li>
+        <li>
+            <p>
+                Deduce the long-run behavior of the inverse Laplace transform based on the zeros of its denominator (its poles). 
+            </p>
+        </li>
+        <li>
+            <p>
+                Solve a non-constant coefficient linear ODE with the Laplace transform.
+            </p>
+        </li>
+        <li>
+            <p>
+                See a linear ODE for which the Laplace transform is completely useless.
+            </p>
+        </li>
+    </ul>
+
+    </objectives>
+
+<exercise>
+    <introduction>
+        <p>
+            In this problem (which will help you begin to review for the final) we will explore the qualitative aspects of the Laplace transform by discovering how we can tell the inverse Laplace transform generally behaves, without actually inverting it.
+        </p>
+    </introduction>
+<task>
+    <statement>
+        <p>
+            Find the solution to each of the following initial value problems using a method other than Laplace transforms. <em>ChatGPT is not a method</em>.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    <m>y^{\prime} + 2y = e^{3t}\ ,\ \ y(0) = 1</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime} + y = t\ , \ \ y(0) = 0</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime} + y = \cos(t)\ , \ \ y(0) = 0</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime\prime} + 9y = \sin(3t)\ , \ \ y(0) = y^{\prime}(0) = 0</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime\prime} + 9y = t\ , \ \ y(0) = y^{\prime}(0) = 0</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime\prime} + 2y'+y = 0\ , \ \ y(0) = 1,\ y^{\prime}(0) = 2</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime\prime} + 3y^{\prime} +2y = e^{-t}\ , \ \ y(0) = y^{\prime}(0) = 0</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>y^{\prime\prime} + 2y^{\prime} + 3y  = e^{-t}\ , \ \ y(0) = y^{\prime}(0) = 0</m>
+                </p>
+            </li>
+        </ol>
+    </statement>
+</task>
+
+<task>
+    <statement>
+        <p>
+            For each of the initial value problems in the previous part, find the Laplace transform of the solution (you can do this without using the solution you found) and combine any terms so that the final answer is expressed as a single reduced fraction. We wish to explore how the solution to the initial value problem depends on the zeros of the denominator of its Laplace transform (assuming all cancellations have been made, these are called <term>poles</term> of a rational function). For each of the Laplace transforms:
+<ul>
+    <li>
+        <p>
+           Find its poles. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Find the real and imaginary parts of each pole.
+        </p>
+    </li>
+    <li>
+        <p>
+            Find the <term>degree</term> of the pole, that is, the power to which its corresponding factor is raised.
+        </p>
+    </li>
+</ul>
+        </p>
+    </statement>
+</task>
+
+<task>
+    <statement>
+        <p>
+            Using your answers to part (a) and (b), as well as a Laplace transform table, discuss how the poles of the Laplace transform influence the solution to the initial value problem (the inverse Laplace transform). Specifically, if the Laplace transform of a function has a pole at <m>a+bi</m>,
+        </p>
+        <ul>
+            <li>
+                <p>
+                    what will the real part, $a$, contribute to the inverse Laplace transform,
+                </p>
+            </li>
+            <li>
+                <p>
+                    what will the imaginary part, $b$, contribute to the inverse Laplace transform, and
+                </p>
+            </li>
+            <li>
+                <p>
+                    if the pole is a repeated root in the denominator, what will be true in the inverse Laplace transform?
+                </p>
+            </li>
+        </ul>
+    </statement>
+</task>
+
+</exercise>
+
+<exercise>
+    <introduction>
+        <p>
+            Some Laplace transforms can be difficult to find by hand from the definition. In this problem we will find formulas for transforms of certain functions by noticing they are solutions to initial value problems.
+        </p>
+    </introduction>
+    <task>
+        <statement>
+            <p>
+                 For each of the following functions, find a second order initial value problem of the form
+<me>
+\frac{d^2y}{dt^2}+p\frac{dy}{dt}+qy = f(t),\ y(0)=a,\ y'(0)=b,
+</me>
+with <m>q\neq 0</m>, having the given function as a solution. Say what your reasoning was in finding the differential equation, and show that the given function really is a solution to your initial value problem.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        <m>y(t) = te^{2t}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y(t) = t\cos(t)</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>y(t) = t\sin(t)</m>
+                    </p>
+                </li>
+            </ol>
+        </statement>
+    </task>
+    <task>
+        <statement>
+            <p>
+                Use the initial value problems you found in part (a) to find the Laplace transform of each of the given functions in part (a).
+            </p>
+        </statement>
+    </task>
+</exercise>
+
+<exercise>
+    <introduction>
+        <p>
+            In this question we will leverage the fact that if <m>f(t)</m> be a function with <m>\mathscr{L}[f](s) = F(s)</m>, then
+<me>
+\mathscr{L}[t^nf(t)](s) = (-1)^nF^{(n)}(s)
+</me>
+        </p>
+    </introduction>
+<task>
+    <statement>
+        <p>
+            Verify that the formula given above gives the correct Laplace transforms for the functions in problem 2.
+        </p>
+    </statement>
+</task>
+<task>
+    <statement>
+        <p>
+            Use the formula given at the beginning of this problem, applied to <m>ty'</m>, and the fact that 
+<me>
+\lim_{s\to\infty}\mathscr{L}[y](s) = 0
+</me>
+whenever a Laplace transform exists to solve the initial value problem
+<me>
+\frac{d^2y}{dt^2} + t\frac{dy}{dt}-2y = 1\ ,\ \ y(0) = 0\ ,\ \ y^{\prime}(0) = 0.
+</me>  
+        </p>
+    </statement>
+</task>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Use the first formula given in the last problem to explain why Laplace transforms are completely useless to solve the following initial value problem:
+<me>
+\frac{d^2y}{dt^2} + t^2y = 0\ , y(0) = 1, y'(0) = 1.
+</me>
+        </p>
+    </statement>
+</exercise>
+
+
+
+</worksheet>
+<!--/article-->
+<!--/pretext-->

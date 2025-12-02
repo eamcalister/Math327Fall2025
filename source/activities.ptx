@@ -6,15 +6,16 @@
     <xi:include href="./frontmatter.ptx" />
 
     <introduction>
-      <p>
+      <!--p>
         These activities are designed to be used in class to help students understand the material. They are not graded, but students are encouraged to work on them in groups and ask the instructor for help when needed.
-      </p>
+      </p-->
     </introduction>
     <xi:include href="./activities/327InsightmakerIntro.ptx"/>
     <xi:include href="./activities/AnalyticFastpitch.ptx"/>
     <xi:include href="./activities/NumericalFastpitch.ptx"/>
     <xi:include href="./activities/327EddyFreddyRedux.ptx"/>
     <xi:include href="./activities/327TransferParameterEstimationProbs.ptx"/>
+    <xi:include href="./activities/PolesOfLaplaceTransform.ptx"/>
 
     
 
