@@ -30,7 +30,8 @@
             where <m>f(t)</m> is a function we can change. If the response of this system for the input
             <me>
                 f(t) = h(t)
-            </me>?
+            </me>
+            is <m>y=1-e^{-5t}</m>, what are the values of <m>a</m> and <m>b</m>?
         </p>
     </statement>
 
@@ -69,7 +70,7 @@
     <p>
         A <m>100</m> liter tank initially contains only pure water. At time zero a brine solution containing <m>0.1</m> kg of salt per liter of water starts flowing in at a rate of <m>2</m> liters per minute. A well-stirred mixture flows out at <m>2</m> liters per minute. After <m>10</m> seconds an unknown quantity, <m>A</m>, of salt is accidentally dumped into the tank (it dissolves and mixes instantaneously). The concentration of the outflow is monitored and is given by 
         <me>
-            c(t) = 0.1 + 0.195e^{-0.05t}
+            c(t) = 0.1 + 0.195e^{-0.02t}
         </me>
         after time <m>t=10</m> (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank). How much salt was accidentally dumped into the tank? <em>Hint:</em> Set up and solve an IVP involving a <m>\delta</m> function with the parameter <m>A</m>, then match with the given concentration.  
     </p>
