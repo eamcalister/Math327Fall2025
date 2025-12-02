@@ -188,6 +188,33 @@ var ptx_lunr_docs = [
   "number": "3",
   "title": "",
   "body": "  A liter tank initially contains only pure water. At time zero a brine solution containing kg of salt per liter of water starts flowing in at a rate of liters per minute. A well-stirred mixture flows out at liters per minute. After seconds an unknown quantity, , of salt is accidentally dumped into the tank (it dissolves and mixes instantaneously). The concentration of the outflow is monitored and is given by after time (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank). How much salt was accidentally dumped into the tank? Hint: Set up and solve an IVP involving a function with the parameter , then match with the given concentration.   "
+},
+{
+  "id": "sec-section-name-9",
+  "level": "1",
+  "url": "sec-section-name-9.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Poles of the Laplace Transform (plus some other problems)",
+  "body": " Poles of the Laplace Transform (plus some other problems)     Begin reviewing for the final by solving a bunch of IVPs without the Laplace transform.    Deduce the long-run behavior of the inverse Laplace transform based on the zeros of its denominator (its poles).    Solve a non-constant coefficient linear ODE with the Laplace transform.    See a linear ODE for which the Laplace transform is completely useless.       In this problem (which will help you begin to review for the final) we will explore the qualitative aspects of the Laplace transform by discovering how we can tell the inverse Laplace transform generally behaves, without actually inverting it.     Find the solution to each of the following initial value problems using a method other than Laplace transforms. ChatGPT is not a method .                                                For each of the initial value problems in the previous part, find the Laplace transform of the solution (you can do this without using the solution you found) and combine any terms so that the final answer is expressed as a single reduced fraction. We wish to explore how the solution to the initial value problem depends on the zeros of the denominator of its Laplace transform (assuming all cancellations have been made, these are called poles of a rational function). For each of the Laplace transforms:   Find its poles.    Find the real and imaginary parts of each pole.    Find the degree of the pole, that is, the power to which its corresponding factor is raised.         Using your answers to part (a) and (b), as well as a Laplace transform table, discuss how the poles of the Laplace transform influence the solution to the initial value problem (the inverse Laplace transform). Specifically, if the Laplace transform of a function has a pole at ,    what will the real part, $a$, contribute to the inverse Laplace transform,    what will the imaginary part, $b$, contribute to the inverse Laplace transform, and    if the pole is a repeated root in the denominator, what will be true in the inverse Laplace transform?       "
+},
+{
+  "id": "sec-section-name-9-2",
+  "level": "2",
+  "url": "sec-section-name-9.html#sec-section-name-9-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "   Begin reviewing for the final by solving a bunch of IVPs without the Laplace transform.    Deduce the long-run behavior of the inverse Laplace transform based on the zeros of its denominator (its poles).    Solve a non-constant coefficient linear ODE with the Laplace transform.    See a linear ODE for which the Laplace transform is completely useless.    "
+},
+{
+  "id": "sec-section-name-9-3",
+  "level": "2",
+  "url": "sec-section-name-9.html#sec-section-name-9-3",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  In this problem (which will help you begin to review for the final) we will explore the qualitative aspects of the Laplace transform by discovering how we can tell the inverse Laplace transform generally behaves, without actually inverting it.     Find the solution to each of the following initial value problems using a method other than Laplace transforms. ChatGPT is not a method .                                                For each of the initial value problems in the previous part, find the Laplace transform of the solution (you can do this without using the solution you found) and combine any terms so that the final answer is expressed as a single reduced fraction. We wish to explore how the solution to the initial value problem depends on the zeros of the denominator of its Laplace transform (assuming all cancellations have been made, these are called poles of a rational function). For each of the Laplace transforms:   Find its poles.    Find the real and imaginary parts of each pole.    Find the degree of the pole, that is, the power to which its corresponding factor is raised.         Using your answers to part (a) and (b), as well as a Laplace transform table, discuss how the poles of the Laplace transform influence the solution to the initial value problem (the inverse Laplace transform). Specifically, if the Laplace transform of a function has a pole at ,    what will the real part, $a$, contribute to the inverse Laplace transform,    what will the imaginary part, $b$, contribute to the inverse Laplace transform, and    if the pole is a repeated root in the denominator, what will be true in the inverse Laplace transform?      "
 }
 ]
 
