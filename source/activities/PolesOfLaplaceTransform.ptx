@@ -44,7 +44,7 @@
         <ol>
             <li>
                 <p>
-                    <m>y^{\prime} + 2y = e^{3t}\ ,\ \ y(0) = 1</m>
+                    <m>y^{\prime} + y = e^{-t}\ ,\ \ y(0) = 0</m>
                 </p>
             </li>
             <li>
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <p>
-                    <m>y^{\prime} + y = \cos(t)\ , \ \ y(0) = 0</m>
+                    <m>y^{\prime} + y = t^{2}\ , \ \ y(0) = 0</m>
                 </p>
             </li>
             <li>
@@ -69,7 +69,7 @@
             </li>
             <li>
                 <p>
-                    <m>y^{\prime\prime} + 2y'+y = 0\ , \ \ y(0) = 1,\ y^{\prime}(0) = 2</m>
+                    <m>y^{\prime\prime} + 9y = t^2\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
             </li>
             <li>
@@ -119,12 +119,12 @@
         <ul>
             <li>
                 <p>
-                    what will the real part, $a$, contribute to the inverse Laplace transform,
+                    what will the real part, <m>a</m>, contribute to the inverse Laplace transform,
                 </p>
             </li>
             <li>
                 <p>
-                    what will the imaginary part, $b$, contribute to the inverse Laplace transform, and
+                    what will the imaginary part, <m>b</m>, contribute to the inverse Laplace transform, and
                 </p>
             </li>
             <li>
