@@ -46,41 +46,81 @@
                 <p>
                     <m>y^{\prime} + y = e^{-t}\ ,\ \ y(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with an <url href="https://eamcalister.github.io/Math327Fall2025/notes/first-order-linear.html" target="blank" visual="integrating factor"></url> <m>y = te^{-t}</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime} + y = t\ , \ \ y(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with an <url href="https://eamcalister.github.io/Math327Fall2025/notes/first-order-linear.html" target="blank" visual="integrating factor"></url>. <m>y = e^{-t}+t-1</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime} + y = t^{2}\ , \ \ y(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with an <url href="https://eamcalister.github.io/Math327Fall2025/notes/first-order-linear.html" target="blank" visual="integrating factor"></url>. <m>y = -2e^{-t}+(t^2-2t+2)</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime\prime} + 9y = \sin(3t)\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with the <url href="https://eamcalister.github.io/Math327Fall2025/notes/second-order-linear-nonhom.html" target="blank" visual="Method of Undetermined Coeffcients"></url>. <m>y = \frac{1}{18}\sin(3t)-\frac{1}{6}t\cos(3t)</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime\prime} + 9y = t\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                         Solve with the <url href="https://eamcalister.github.io/Math327Fall2025/notes/second-order-linear-nonhom.html" target="blank" visual="Method of Undetermined Coeffcients"></url>.<m>y = -\frac{1}{27}\sin(3t)+\frac{1}{9}t</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime\prime} + 9y = t^2\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with the <url href="https://eamcalister.github.io/Math327Fall2025/notes/second-order-linear-nonhom.html" target="blank" visual="Method of Undetermined Coeffcients"></url>.<m>y = \frac{2}{81}\cos(3t)+\frac{1}{9}t^2-\frac{2}{81}</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime\prime} + 3y^{\prime} +2y = e^{-t}\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with the <url href="https://eamcalister.github.io/Math327Fall2025/notes/second-order-linear-nonhom.html" target="blank" visual="Method of Undetermined Coeffcients"></url>.<m>y = -e^{-t}+e^{-2t}+te^{-t}</m>
+                    </p>
+                </solution>
             </li>
             <li>
                 <p>
                     <m>y^{\prime\prime} + 2y^{\prime} + 3y  = e^{-t}\ , \ \ y(0) = y^{\prime}(0) = 0</m>
                 </p>
+                <solution>
+                    <p>
+                        Solve with the <url href="https://eamcalister.github.io/Math327Fall2025/notes/second-order-linear-nonhom.html" target="blank" visual="Method of Undetermined Coeffcients"></url>.<m>y = -\frac{1}{2}e^{-t}\cos(\sqrt{2}t)+\frac{1}{2}e^{-t}</m>
+                    </p>
+                </solution>
             </li>
         </ol>
     </statement>
@@ -108,6 +148,76 @@
     </li>
 </ul>
         </p>
+            <solution>
+        <p>
+                    <ol>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{1}{(s+1)^2}</m>
+                </p>
+                <p>
+                    Pole at <m>s=-1</m> (all real, degree 2).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{1}{s^2(s+1)}</m>
+                </p>
+                <p>
+                    Poles at <m>s=-1</m> (all real, degree 1) and <m>s=0</m> (all real, degree 2).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{2}{s^3(s+1)}</m>
+                </p>
+                <p>
+                    Poles at <m>s=-1</m> (all real, degree 1) and <m>s=0</m> (all real, degree 3).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{3}{(s^2+9)^2} = \frac{3}{(s+3i)^2(s-3i)^2}</m>
+                </p>
+                <p>
+                    Poles at <m>s=\pm 3i</m> (all imaginary, both degree 2).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{1}{s^2(s^2+9)} = \frac{1}{s^2(s+3i)(s-3i)}</m>
+                </p>
+                <p>
+                    Poles at <m>s=0</m> (all real, degree 2), <m>s=\pm 3i</m> (all imaginary, both degree 1)
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{2}{s^3(s^2+9)} = \frac{2}{s^3(s+3i)(s-3i)}</m>
+                </p>
+                <p>
+                    Poles at <m>s=0</m> (all real, degree 3), <m>s=\pm 3i</m> (all imaginary, both degree 1)
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{1}{(s+2)(s+1)^2}</m>
+                </p>
+                <p>
+                    Poles at <m>s=-2</m> (all real, degree 1), <m>s=-1</m> (all real, degree 2)
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>Y(s) = \frac{1}{(s^2+2s+3)(s+1)} = \frac{1}{(s-(-1+i\sqrt{2}))(s-(-1-i\sqrt{2}))(s+1)}</m>
+                </p>
+                <p>
+                    Poles at <m>s=-1</m> (all real, degree 1), <m>s=-1\pm i\sqrt{2}</m> (real part <m>-1</m>, imaginary parts <m>\pm\sqrt{2}</m>, both degree 1)
+                </p>
+            </li>
+        </ol>
+        </p>
+    </solution>
     </statement>
 </task>
 
@@ -133,6 +243,11 @@
                 </p>
             </li>
         </ul>
+<solution>
+    <p>
+        The real part of each pole corresponds to the growth/decay rate of an exponential terms/factors in the solution. The imaginary part of a pole corresponds to the angular frequency of sinusoidal terms/factors in the solution. If the degree of a pole is one more than the polynomial by which that exponential/sinusoidal term will be multiplied. When dealing with complex poles in conjugate pairs, only one needs to be considered to get this information.
+    </p>
+</solution>
     </statement>
 </task>
 
@@ -158,16 +273,33 @@ with <m>q\neq 0</m>, having the given function as a solution. Say what your reas
                     <p>
                         <m>y(t) = te^{2t}</m>
                     </p>
+                    <solution>
+                        <p>
+                            <m>y''+4y' - 4y = 0,\ y(0)=0,\ y'(0)=1</m>
+                        </p>
+                    </solution>
                 </li>
                 <li>
                     <p>
                         <m>y(t) = t\cos(t)</m>
                     </p>
+                    <solution>
+                        <p>
+                            <m>y'' + y = -\sin(t),\ y(0) = 0,\ y'(0)=1</m>
+                        </p>
+                    </solution>
                 </li>
                 <li>
                     <p>
                         <m>y(t) = t\sin(t)</m>
                     </p>
+                
+                    <solution>
+                        <p>
+                            <m>y'' + y = 2\cos(t),\ y(0)=0,\ y'(0) = 0</m>
+                        </p>
+                
+                    </solution>
                 </li>
             </ol>
         </statement>
@@ -177,6 +309,11 @@ with <m>q\neq 0</m>, having the given function as a solution. Say what your reas
             <p>
                 Use the initial value problems you found in part (a) to find the Laplace transform of each of the given functions in part (a).
             </p>
+            <solution>
+                <p>
+                    Use the IVPs given above and compare to the results given by 5, 6, and 7 in the Laplace transform table at <url href="https://eamcalister.github.io/Math327Fall2025/notes/LaplaceSolving.html" target="blank" visual="Laplace solving"></url>.
+                </p>
+            </solution>
         </statement>
     </task>
 </exercise>
@@ -210,6 +347,19 @@ whenever a Laplace transform exists to solve the initial value problem
 </me>  
         </p>
     </statement>
+<solution>
+    <p>
+        Observe that <m>\mathscr{L}\{ty'\}(s) = -sY'(s)-Y(s)</m>. Thus, when we take the Laplace transform of both sides of the ODE, we can get the first-order equation
+        <me>
+            Y' + (s-\frac{3}{s})Y = \frac{1}{s^2}.
+        </me>
+        Solving this and using the limit condition (instead of initial conditions), we get
+        <me>
+            Y(s) = \frac{1}{s^3}.
+        </me>
+        Hence, the solution to the IVP is <m>y = \frac{t^2}{2}</m>.
+    </p>
+</solution>
 </task>
 </exercise>
 
@@ -218,10 +368,22 @@ whenever a Laplace transform exists to solve the initial value problem
         <p>
             Use the first formula given in the last problem to explain why Laplace transforms are completely useless to solve the following initial value problem:
 <me>
-\frac{d^2y}{dt^2} + t^2y = 0\ , y(0) = 1, y'(0) = 1.
+\frac{d^2y}{dt^2} + t^2y = 0\ , y(0) = 0, y'(0) = 0.
 </me>
         </p>
     </statement>
+    <solution>
+        <p>
+           Using the equation <me>
+\mathscr{L}[t^nf(t)](s) = (-1)^nF^{(n)}(s)
+</me>
+and taking the Laplace transform of the given ODE, we get
+<me>
+    s^2Y + Y''(s) = 0.
+</me>
+Thus, the Laplace transform of the given ODE is the same ODE. 
+        </p>
+    </solution>
 </exercise>
 
 
