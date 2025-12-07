@@ -72,7 +72,7 @@
         <me>
             c(t) = 0.1 + 0.195e^{-0.02t}
         </me>
-        after time <m>t=10</m> (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank). How much salt was accidentally dumped into the tank? <em>Hint:</em> Set up and solve an IVP involving a <m>\delta</m> function with the parameter <m>A</m>, then match with the given concentration.  
+        after the salt was dumped into the tank (note, the concentration in the tank is the mass of salt in the tank divided by the volume of the tank and <m>t</m> is still the time after the mixing process started). How much salt was accidentally dumped into the tank? <em>Hint:</em> Set up and solve an IVP involving a <m>\delta</m> function with the parameter <m>A</m>, then match with the given concentration.  
     </p>
 </statement>
 </exercise>
